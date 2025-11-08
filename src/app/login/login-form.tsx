@@ -3,6 +3,7 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
@@ -19,6 +20,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 export function LoginForm() {
     const { toast } = useToast();
+    const router = useRouter();
 
     const form = useForm<FormValues>({
         resolver: zodResolver(formSchema),
@@ -32,9 +34,10 @@ export function LoginForm() {
         // Placeholder for login logic
         console.log('Login attempt with:', values);
         toast({
-            title: 'Login Attempted',
-            description: 'This is a demo. Login functionality is not implemented.',
+            title: 'Login Successful!',
+            description: 'Redirecting to your dashboard...',
         });
+        router.push('/dashboard');
     };
     
     return (
