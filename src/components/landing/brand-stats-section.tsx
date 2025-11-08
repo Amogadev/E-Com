@@ -29,7 +29,7 @@ export function BrandStatsSection() {
             <div className="bg-foreground text-background">
                 <div className="container mx-auto px-4 py-3 text-center">
                     <p className="font-medium">
-                        On average 71% of new sellers get their first sales within 4 weeks of starting their business.¹
+                        Join thousands of sellers who make their first sale in under 30 days!¹
                     </p>
                 </div>
             </div>
