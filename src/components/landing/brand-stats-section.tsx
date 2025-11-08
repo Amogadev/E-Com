@@ -33,7 +33,7 @@ export function BrandStatsSection() {
                     </p>
                 </div>
             </div>
-            <div className="container mx-auto px-4 py-20 md:py-28">
+            <div className="container mx-auto px-4 pt-20 pb-10 md:pt-28 md:pb-14">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
                     <div className="text-center lg:text-left">
                         <h2 className="text-3xl md:text-4xl font-bold font-headline">
