@@ -11,7 +11,7 @@ export function Header() {
           <Button variant="ghost" asChild>
             <Link href="/generate-description">AI Tools</Link>
           </Button>
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
             <Link href="#">Start Selling</Link>
           </Button>
         </nav>

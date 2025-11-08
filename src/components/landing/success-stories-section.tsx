@@ -26,7 +26,7 @@ const stories = [
 
 export function SuccessStoriesSection() {
   return (
-    <section className="py-20 md:py-28 bg-card">
+    <section className="py-20 md:py-28 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Join Our Community of Success</h2>
@@ -47,11 +47,11 @@ export function SuccessStoriesSection() {
                 return (
                     <CarouselItem key={story.name}>
                         <div className="p-1">
-                            <Card className="border-0 shadow-none">
+                            <Card className="bg-background shadow-lg">
                                 <CardContent className="flex flex-col items-center text-center p-8 md:p-12">
                                     <p className="text-xl font-medium mb-6 italic text-foreground/80">"{story.quote}"</p>
                                     <div className="flex items-center gap-4">
-                                        <Avatar className="h-16 w-16">
+                                        <Avatar className="h-16 w-16 border-2 border-primary/50 p-1">
                                             {avatar && (
                                                 <AvatarImage src={avatar.imageUrl} alt={story.name} data-ai-hint={avatar.imageHint} />
                                             )}

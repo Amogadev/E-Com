@@ -11,7 +11,7 @@ export function FooterCtaSection() {
         <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
           Join Chocobe today and turn your passion into a profitable business. It's free to get started.
         </p>
-        <Button size="lg" variant="secondary" className="shadow-lg" asChild>
+        <Button size="lg" variant="secondary" className="shadow-lg scale-100 hover:scale-105 transition-transform" asChild>
           <Link href="#">Sign Up Now</Link>
         </Button>
       </div>
