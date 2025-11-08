@@ -19,8 +19,8 @@ export default function Home() {
         <BrandStatsSection />
         <FeaturesSection />
         <SellingProcessSection />
-        <StartSellingTodaySection />
         <FooterCtaSection />
+        <StartSellingTodaySection />
         <SuccessStoriesSection />
       </main>
       <Footer />
