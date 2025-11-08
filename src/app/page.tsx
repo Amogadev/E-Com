@@ -1,6 +1,7 @@
 import { Header } from '@/components/landing/header';
 import { PromoBanner } from '@/components/landing/promo-banner';
 import { HeroSection } from '@/components/landing/hero-section';
+import { BrandStatsSection } from '@/components/landing/brand-stats-section';
 import { FeaturesSection } from '@/components/landing/features-section';
 import { SellingProcessSection } from '@/components/landing/selling-process-section';
 import { SuccessStoriesSection } from '@/components/landing/success-stories-section';
@@ -14,6 +15,7 @@ export default function Home() {
       <PromoBanner />
       <main className="flex-1">
         <HeroSection />
+        <BrandStatsSection />
         <FeaturesSection />
         <SellingProcessSection />
         <SuccessStoriesSection />
