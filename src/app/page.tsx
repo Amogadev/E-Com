@@ -20,8 +20,8 @@ export default function Home() {
         <FeaturesSection />
         <SellingProcessSection />
         <StartSellingTodaySection />
-        <SuccessStoriesSection />
         <FooterCtaSection />
+        <SuccessStoriesSection />
       </main>
       <Footer />
     </div>
