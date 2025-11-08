@@ -7,7 +7,7 @@ export default function LoginPage() {
         <div className="flex min-h-screen flex-col bg-secondary/50">
             <Header />
             <main className="flex-1 flex items-center justify-center container mx-auto px-4 py-16">
-                <div className="w-full max-w-md">
+                <div className="w-full max-w-sm">
                     <LoginForm />
                 </div>
             </main>
