@@ -15,14 +15,20 @@
     {
       "id": "avatar-2",
       "description": "Avatar for another successful seller.",
-      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbnxlbnwwfHx8fDE3NjI4NTQ0MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbnxlbnwwfHx8fDE3NjI4NTQ0MzR8MA&ixlib:rb-4.1.0&q=80&w=1080",
       "imageHint": "portrait man"
     },
     {
       "id": "avatar-3",
       "description": "Avatar for a third successful seller.",
-      "imageUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NjI4NTQ0NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NjI4NTQ0NTV8MA&ixlib:rb-4.1.0&q=80&w=1080",
       "imageHint": "portrait professional"
+    },
+    {
+      "id": "packaging-delivery",
+      "description": "A person packing boxes for delivery.",
+      "imageUrl": "https://images.unsplash.com/photo-1631010231931-d2c396b444ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYWNrYWdpbmclMjBkZWxpdmVyeXxlbnwwfHx8fDE3NjI1ODk5MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "packaging delivery"
     }
   ]
 }
