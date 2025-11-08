@@ -14,7 +14,7 @@ const stories = [
     id: 'avatar-1',
     name: 'Sarah L.',
     store: 'San Francisco, CA',
-    quote: 'Modern Nook transformed my small apartment into a cozy, functional space. The quality is amazing for the price!',
+    quote: 'chocobe transformed my small apartment into a cozy, functional space. The quality is amazing for the price!',
   },
   {
     id: 'avatar-2',
@@ -26,7 +26,7 @@ const stories = [
     id: 'avatar-3',
     name: 'Jessica T.',
     store: 'New York, NY',
-    quote: 'I\'m obsessed with my new dining set. It\'s the centerpiece of my home and I get so many compliments on it. Thank you, Modern Nook!',
+    quote: 'I\'m obsessed with my new dining set. It\'s the centerpiece of my home and I get so many compliments on it. Thank you, chocobe!',
   },
   {
     id: 'avatar-4',
@@ -49,7 +49,7 @@ export function SuccessStoriesSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">See what our customers are saying</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Real stories from people who built their dream homes with Modern Nook.
+            Real stories from people who built their dream homes with chocobe.
           </p>
         </div>
         <Carousel

@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { HelpBot } from '@/components/landing/help-bot';
 
 export const metadata: Metadata = {
-  title: 'Modern Nook',
+  title: 'chocobe',
   description: 'Design Your Space, Define Your Style.',
 };
 

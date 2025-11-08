@@ -15,7 +15,7 @@ export function HelpBot() {
 
   const handleClick = () => {
     toast({
-      title: 'Modern Nook Support',
+      title: 'chocobe Support',
       description:
         'Our design support bot is currently tidying up. Please try again later!',
     });

@@ -37,7 +37,7 @@ export function BrandStatsSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
                     <div className="text-center lg:text-left">
                         <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                            Why people choose Modern Nook
+                            Why people choose chocobe
                         </h2>
                     </div>
                     <div className="lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-8">

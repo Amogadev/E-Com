@@ -13,7 +13,7 @@ export function HeroSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight mb-4 font-headline">
-              Modern Nook – Design Your Space, Define Your Style.
+              chocobe – Design Your Space, Define Your Style.
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto md:mx-0">
               Discover curated furniture collections to turn your house into a home.
