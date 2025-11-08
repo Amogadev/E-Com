@@ -41,7 +41,7 @@ const incentives = [
 
 export function FooterCtaSection() {
   return (
-    <section className="py-10 md:py-14 bg-secondary/50">
+    <section className="pt-10 pb-8 md:pt-14 md:pb-10 bg-secondary/50">
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Get a head-start to selling with us</h2>
