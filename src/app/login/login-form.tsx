@@ -23,8 +23,8 @@ export function LoginForm() {
     const form = useForm<FormValues>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            username: '',
-            password: '',
+            username: 'admin',
+            password: 'admin',
         },
     });
 
@@ -68,6 +68,7 @@ export function LoginForm() {
                             render={({ field }) => (
                                 <FormItem>
                                     <FormLabel className="text-base">Password</FormLabel>
+
                                     <FormControl>
                                         <Input type="password" placeholder="••••••••" {...field} className="py-6 text-base" />
                                     </FormControl>
