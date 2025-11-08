@@ -41,24 +41,24 @@ const incentives = [
 
 export function FooterCtaSection() {
   return (
-    <section className="py-20 md:py-28 bg-secondary/50">
+    <section className="py-10 md:py-14 bg-secondary/50">
         <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Get a head-start to selling with us</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12">
                 {incentives.map((incentive) => (
                     <div key={incentive.id} className="relative">
                         <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-accent p-3 rounded-full shadow-lg border-4 border-secondary/50">
                             {incentive.icon}
                         </div>
-                        <Card className="text-center h-full flex flex-col pt-10 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <CardHeader className="p-4">
-                                <div className="inline-block bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-sm mx-auto mb-2">{incentive.badge}</div>
-                                <CardTitle className="text-xl font-bold">{incentive.title}</CardTitle>
+                        <Card className="text-center h-full flex flex-col pt-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <CardHeader className="p-3">
+                                <div className="inline-block bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-xs mx-auto mb-2">{incentive.badge}</div>
+                                <CardTitle className="text-lg font-bold">{incentive.title}</CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col justify-between p-4">
-                                <ul className="space-y-2 text-left text-muted-foreground text-sm mb-6">
+                                <ul className="space-y-2 text-left text-muted-foreground text-sm mb-4">
                                     {incentive.features.map((feature, index) => (
                                         <li key={index} className="flex items-start gap-2">
                                             <Check className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
