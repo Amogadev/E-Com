@@ -6,8 +6,11 @@ export function Footer() {
     <footer className="bg-card border-t">
       <div className="container mx-auto px-4 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex-shrink-0">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <Logo />
+            <p className="text-sm text-muted-foreground mt-2 max-w-xs">
+              The all-in-one platform to launch and scale your e-commerce business.
+            </p>
           </div>
           <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Features</a>
