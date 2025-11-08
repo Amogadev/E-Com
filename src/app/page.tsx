@@ -8,6 +8,7 @@ import { SuccessStoriesSection } from '@/components/landing/success-stories-sect
 import { FooterCtaSection } from '@/components/landing/footer-cta-section';
 import { Footer } from '@/components/landing/footer';
 import { SecondaryPromoBanner } from '@/components/landing/secondary-promo-banner';
+import { StartSellingSection } from '@/components/landing/start-selling-section';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <SecondaryPromoBanner />
         <SellingProcessSection />
         <FooterCtaSection />
+        <StartSellingSection />
         <SuccessStoriesSection />
       </main>
       <Footer />
