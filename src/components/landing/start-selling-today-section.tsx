@@ -7,7 +7,7 @@ export function StartSellingTodaySection() {
     const sectionImage = PlaceHolderImages.find(img => img.id === 'packaging-delivery');
 
     return (
-        <section className="py-20 md:py-28 bg-background">
+        <section className="py-10 md:py-14 bg-background">
             <div className="container mx-auto px-4">
                 <div className="bg-secondary/50 rounded-2xl shadow-lg overflow-hidden">
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center">

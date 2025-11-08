@@ -25,7 +25,7 @@ const stories = [
 
 export function SuccessStoriesSection() {
   return (
-    <section className="pt-10 pb-20 md:pt-14 md:pb-28 bg-secondary/50">
+    <section className="pt-10 pb-10 md:pt-14 md:pb-14 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">See what our sellers have to say</h2>
