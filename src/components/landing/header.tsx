@@ -8,9 +8,6 @@ export function Header() {
       <div className="container flex h-20 items-center">
         <Logo />
         <nav className="ml-auto flex items-center gap-4 sm:gap-6">
-          <Button variant="ghost" asChild>
-            <Link href="#">Login</Link>
-          </Button>
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
             <Link href="#">Start Selling</Link>
           </Button>
