@@ -4,7 +4,6 @@ import { HeroSection } from '@/components/landing/hero-section';
 import { BrandStatsSection } from '@/components/landing/brand-stats-section';
 import { FeaturesSection } from '@/components/landing/features-section';
 import { SellingProcessSection } from '@/components/landing/selling-process-section';
-import { StartSellingTodaySection } from '@/components/landing/start-selling-today-section';
 import { SuccessStoriesSection } from '@/components/landing/success-stories-section';
 import { FooterCtaSection } from '@/components/landing/footer-cta-section';
 import { Footer } from '@/components/landing/footer';
@@ -23,7 +22,6 @@ export default function Home() {
         <SellingProcessSection />
         <FooterCtaSection />
         <SuccessStoriesSection />
-        <StartSellingTodaySection />
       </main>
       <Footer />
     </div>
