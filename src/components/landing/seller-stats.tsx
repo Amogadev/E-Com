@@ -37,7 +37,7 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
     });
 
     return (
-        <span className="font-bold text-3xl md:text-4xl text-primary">
+        <span className="font-bold text-3xl text-primary">
             {displayValue}{suffix}
         </span>
     );
@@ -50,13 +50,13 @@ export function SellerStats() {
     });
 
     return (
-        <div ref={ref} className="grid grid-cols-3 gap-4">
+        <div ref={ref} className="grid grid-cols-3 gap-4 max-w-md mx-auto md:mx-0">
             {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
+                <div key={stat.label} className="text-center md:text-left">
                     {inView ? (
                         <AnimatedNumber value={stat.value} suffix={stat.suffix} />
                     ) : (
-                         <span className="font-bold text-3xl md:text-4xl text-primary">
+                         <span className="font-bold text-3xl text-primary">
                             0{stat.suffix.replace(/[0-9.]/g, '')}
                         </span>
                     )}
