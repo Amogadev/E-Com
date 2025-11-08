@@ -22,8 +22,8 @@ export default function Home() {
         <SecondaryPromoBanner />
         <SellingProcessSection />
         <FooterCtaSection />
-        <StartSellingTodaySection />
         <SuccessStoriesSection />
+        <StartSellingTodaySection />
       </main>
       <Footer />
     </div>
