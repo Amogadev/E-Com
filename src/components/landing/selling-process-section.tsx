@@ -25,7 +25,7 @@ const steps = [
 
 export function SellingProcessSection() {
   return (
-    <section className="py-10 md:py-14 bg-background">
+    <section className="py-10 md:py-14 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Start Selling in 4 Easy Steps</h2>
@@ -46,7 +46,7 @@ export function SellingProcessSection() {
                     </div>
                   )}
                 </div>
-                <div className="absolute left-1/2 -translate-x-1/2 bg-background p-2 rounded-full border-2 border-border z-10">
+                <div className="absolute left-1/2 -translate-x-1/2 bg-secondary/50 p-2 rounded-full border-2 border-border z-10">
                     <div className="bg-primary/10 p-3 rounded-full">
                         {step.icon}
                     </div>
