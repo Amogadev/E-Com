@@ -8,6 +8,7 @@ import { StartSellingTodaySection } from '@/components/landing/start-selling-tod
 import { SuccessStoriesSection } from '@/components/landing/success-stories-section';
 import { FooterCtaSection } from '@/components/landing/footer-cta-section';
 import { Footer } from '@/components/landing/footer';
+import { SecondaryPromoBanner } from '@/components/landing/secondary-promo-banner';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <BrandStatsSection />
         <FeaturesSection />
+        <SecondaryPromoBanner />
         <SellingProcessSection />
         <FooterCtaSection />
         <StartSellingTodaySection />
