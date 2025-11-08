@@ -1,6 +1,13 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { User } from 'lucide-react';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const stories = [
   {
@@ -21,11 +28,23 @@ const stories = [
     store: 'Vintage Finds',
     quote: 'The global reach is incredible. I\'m now shipping my vintage clothing to customers on three different continents. Thank you, Chocobe!',
   },
+  {
+    id: 'avatar-4',
+    name: 'David Chen',
+    store: 'Home Brew Bros',
+    quote: 'The analytics tools are a game-changer. I can see exactly what\'s working and make smarter decisions for my business.',
+    },
+    {
+    id: 'avatar-5',
+    name: 'Emily Wada',
+    store: 'Petal Perfect',
+    quote: 'Customer support is top-notch. They\'re always quick to respond and incredibly helpful whenever I have a question.',
+    }
 ];
 
 export function SuccessStoriesSection() {
   return (
-    <section className="pt-10 pb-10 md:pt-14 md:pb-14 bg-secondary/50">
+    <section className="pt-10 pb-14 md:pt-14 md:pb-24 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">See what our sellers have to say</h2>
@@ -33,27 +52,41 @@ export function SuccessStoriesSection() {
             Real stories from sellers who built their dreams on Chocobe.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
             {stories.map((story) => (
-                    <Card key={story.name} className="bg-background shadow-lg flex flex-col">
-                        <CardContent className="flex flex-col items-center text-center p-8 md:p-10 flex-grow">
-                            <p className="text-lg font-medium mb-6 italic text-foreground/80 flex-grow">"{story.quote}"</p>
-                            <div className="flex flex-col items-center gap-4">
-                                <Avatar className="h-20 w-20 border-2 border-primary/50 p-1">
-                                    <AvatarFallback>
-                                        <User className="h-10 w-10 text-muted-foreground" />
-                                    </AvatarFallback>
-                                </Avatar>
-                                <div>
-                                    <p className="font-semibold text-xl">{story.name}</p>
-                                    <p className="text-sm text-muted-foreground">{story.store}</p>
+                <CarouselItem key={story.id} className="md:basis-1/2 lg:basis-1/3">
+                     <div className="p-1 h-full">
+                        <Card className="bg-background shadow-lg flex flex-col h-full">
+                            <CardContent className="flex flex-col items-center text-center p-8 md:p-10 flex-grow">
+                                <p className="text-lg font-medium mb-6 italic text-foreground/80 flex-grow">"{story.quote}"</p>
+                                <div className="flex flex-col items-center gap-4">
+                                    <Avatar className="h-20 w-20 border-2 border-primary/50 p-1">
+                                        <AvatarFallback>
+                                            <User className="h-10 w-10 text-muted-foreground" />
+                                        </AvatarFallback>
+                                    </Avatar>
+                                    <div>
+                                        <p className="font-semibold text-xl">{story.name}</p>
+                                        <p className="text-sm text-muted-foreground">{story.store}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </CardContent>
-                    </Card>
+                            </CardContent>
+                        </Card>
+                     </div>
+                </CarouselItem>
                 )
             )}
-        </div>
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
       </div>
     </section>
   );
