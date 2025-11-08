@@ -28,17 +28,13 @@ export function SellingProcessSection() {
   return (
     <section className="py-20 md:py-28 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Start Selling in 4 Easy Steps</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
             We've made it incredibly simple to launch your online store.
           </p>
         </div>
-        <div className="relative">
-            <div
-                className="hidden lg:block absolute top-1/2 left-0 w-full h-[2px] -translate-y-1/2 bg-border"
-            ></div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step) => (
               <Card key={step.title} className="relative text-center bg-card shadow-sm z-10 border hover:border-primary/50">
                 <CardHeader>
@@ -52,7 +48,6 @@ export function SellingProcessSection() {
                 </CardContent>
               </Card>
             ))}
-          </div>
         </div>
       </div>
     </section>
