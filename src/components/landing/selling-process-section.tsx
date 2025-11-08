@@ -1,5 +1,4 @@
 import { UserPlus, PackagePlus, Rocket, Wallet } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const steps = [
   {
@@ -26,28 +25,43 @@ const steps = [
 
 export function SellingProcessSection() {
   return (
-    <section className="py-20 md:py-28 bg-background overflow-hidden">
+    <section className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Start Selling in 4 Easy Steps</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
             We've made it incredibly simple to launch your online store.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step) => (
-              <Card key={step.title} className="relative text-center bg-card shadow-sm z-10 border hover:border-primary/50">
-                <CardHeader>
-                    <div className="mx-auto w-fit mb-4 p-4 bg-primary/10 rounded-xl">
+        <div className="relative max-w-2xl mx-auto">
+          <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border" aria-hidden="true"></div>
+          <div className="space-y-16">
+            {steps.map((step, index) => (
+              <div key={step.title} className="relative flex items-center">
+                <div className="flex-1 text-right pr-12">
+                  {index % 2 === 0 && (
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                      <p className="text-muted-foreground">{step.description}</p>
+                    </div>
+                  )}
+                </div>
+                <div className="absolute left-1/2 -translate-x-1/2 bg-background p-2 rounded-full border-2 border-border z-10">
+                    <div className="bg-primary/10 p-3 rounded-full">
                         {step.icon}
                     </div>
-                    <CardTitle className="text-xl">{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-muted-foreground">{step.description}</p>
-                </CardContent>
-              </Card>
+                </div>
+                <div className="flex-1 pl-12">
+                  {index % 2 !== 0 && (
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                      <p className="text-muted-foreground">{step.description}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
             ))}
+          </div>
         </div>
       </div>
     </section>
