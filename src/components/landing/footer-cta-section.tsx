@@ -49,19 +49,19 @@ export function FooterCtaSection() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
                 {incentives.map((incentive) => (
                     <div key={incentive.id} className="relative">
-                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-accent p-4 rounded-full shadow-lg border-4 border-secondary/50">
+                        <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-accent p-3 rounded-full shadow-lg border-4 border-secondary/50">
                             {incentive.icon}
                         </div>
-                        <Card className="text-center h-full flex flex-col pt-12 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <CardHeader>
-                                <div className="inline-block bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-sm mx-auto mb-4">{incentive.badge}</div>
-                                <CardTitle className="text-2xl font-bold">{incentive.title}</CardTitle>
+                        <Card className="text-center h-full flex flex-col pt-10 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <CardHeader className="p-4">
+                                <div className="inline-block bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-sm mx-auto mb-2">{incentive.badge}</div>
+                                <CardTitle className="text-xl font-bold">{incentive.title}</CardTitle>
                             </CardHeader>
-                            <CardContent className="flex-grow flex flex-col justify-between">
-                                <ul className="space-y-3 text-left text-muted-foreground mb-8">
+                            <CardContent className="flex-grow flex flex-col justify-between p-4">
+                                <ul className="space-y-2 text-left text-muted-foreground text-sm mb-6">
                                     {incentive.features.map((feature, index) => (
-                                        <li key={index} className="flex items-start gap-3">
-                                            <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                                        <li key={index} className="flex items-start gap-2">
+                                            <Check className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
                                             <span>{feature}</span>
                                         </li>
                                     ))}
