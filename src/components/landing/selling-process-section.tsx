@@ -36,14 +36,11 @@ export function SellingProcessSection() {
         </div>
         <div className="relative">
             <div
-                className="hidden lg:block absolute top-1/2 left-0 w-full h-[150px] -translate-y-1/2"
-                style={{
-                    background: 'radial-gradient(circle at 50% 0, transparent 35%, hsl(var(--border)) 35.5%, hsl(var(--border)) 36%, transparent 36.5%)'
-                }}
+                className="hidden lg:block absolute top-1/2 left-0 w-full h-[2px] -translate-y-1/2 bg-border"
             ></div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {steps.map((step, index) => (
-              <Card key={step.title} className="relative text-center bg-card shadow-sm z-10 border hover:border-primary/50" style={{ transform: `translateY(${(index % 2) * 2 - 1 * (index < 2 ? 1 : -1) * 30}px)` }}>
+            {steps.map((step) => (
+              <Card key={step.title} className="relative text-center bg-card shadow-sm z-10 border hover:border-primary/50">
                 <CardHeader>
                     <div className="mx-auto w-fit mb-4 p-4 bg-primary/10 rounded-xl">
                         {step.icon}
