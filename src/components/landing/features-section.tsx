@@ -34,19 +34,17 @@ export function FeaturesSection() {
             We provide everything you need to build a successful online business.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
           {features.map((feature) => (
-            <Card key={feature.title} className="text-center bg-card shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
-              <CardHeader>
-                <div className="mx-auto bg-primary/10 p-4 rounded-xl w-fit">
+            <div key={feature.title} className="flex gap-6 items-start">
+                <div className="bg-primary/10 p-4 rounded-xl">
                     {feature.icon}
                 </div>
-                <CardTitle className="pt-4 text-xl">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </CardContent>
-            </Card>
+                <div>
+                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                </div>
+            </div>
           ))}
         </div>
       </div>
