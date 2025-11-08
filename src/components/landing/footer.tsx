@@ -12,7 +12,7 @@ export function Footer() {
               The all-in-one platform to launch and scale your e-commerce business.
             </p>
           </div>
-          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+          <nav className="flex flex-nowrap justify-center gap-x-6 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Features</a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Success Stories</a>
