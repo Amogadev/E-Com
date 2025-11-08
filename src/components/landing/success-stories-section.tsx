@@ -8,30 +8,30 @@ const stories = [
     id: 'avatar-1',
     name: 'Sarah L.',
     store: 'Artisan Creations',
-    quote: 'LaunchPad transformed my hobby into a thriving business. The tools are intuitive and my sales have tripled in just six months!',
+    quote: 'Chocobe transformed my hobby into a thriving business. The tools are intuitive and my sales have tripled in just six months!',
   },
   {
     id: 'avatar-2',
     name: 'Mike R.',
     store: 'Gadget Grove',
-    quote: 'As a non-technical person, I was worried about starting an online store. LaunchPad made it so easy. I was up and running in a day.',
+    quote: 'As a non-technical person, I was worried about starting an online store. Chocobe made it so easy. I was up and running in a day.',
   },
   {
     id: 'avatar-3',
     name: 'Jessica T.',
     store: 'Vintage Finds',
-    quote: 'The global reach is incredible. I\'m now shipping my vintage clothing to customers on three different continents. Thank you, LaunchPad!',
+    quote: 'The global reach is incredible. I\'m now shipping my vintage clothing to customers on three different continents. Thank you, Chocobe!',
   },
 ];
 
 export function SuccessStoriesSection() {
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-20 md:py-28 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Join Our Community of Success</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Real stories from sellers who built their dreams on LaunchPad.
+            Real stories from sellers who built their dreams on Chocobe.
           </p>
         </div>
         <Carousel

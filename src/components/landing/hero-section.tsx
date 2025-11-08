@@ -7,15 +7,16 @@ export function HeroSection() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-image');
 
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-20 md:py-32 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary to-background animated-gradient -z-10"></div>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-extrabold text-foreground leading-tight mb-6 font-headline">
-              Launch Your Business with LaunchPad
+            <h1 className="text-4xl md:text-6xl font-extrabold text-foreground leading-tight mb-4 font-headline">
+              Chocobe – Build. Sell. Shine.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              The ultimate platform to start, manage, and grow your e-commerce empire. Join thousands of successful sellers today.
+              Turn your passion into profit — with ease and confidence.
             </p>
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg" asChild>
               <Link href="#">Start Selling for Free</Link>

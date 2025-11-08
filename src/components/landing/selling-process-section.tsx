@@ -26,7 +26,7 @@ const steps = [
 
 export function SellingProcessSection() {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-20 md:py-28 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Start Selling in 4 Easy Steps</h2>
@@ -35,10 +35,15 @@ export function SellingProcessSection() {
           </p>
         </div>
         <div className="relative">
-          <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2"></div>
+            <div
+                className="hidden lg:block absolute top-1/2 left-0 w-full h-[150px] -translate-y-1/2"
+                style={{
+                    background: 'radial-gradient(circle at 50% 0, transparent 35%, hsl(var(--border)) 35.5%, hsl(var(--border)) 36%, transparent 36.5%)'
+                }}
+            ></div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {steps.map((step) => (
-              <Card key={step.title} className="relative text-center bg-card shadow-sm">
+            {steps.map((step, index) => (
+              <Card key={step.title} className="relative text-center bg-card shadow-sm z-10" style={{ transform: `translateY(${(index % 2) * 2 - 1 * (index < 2 ? 1 : -1) * 30}px)` }}>
                 <CardHeader>
                     <div className="mx-auto w-fit mb-4 p-4 bg-primary/10 rounded-full">
                         {step.icon}

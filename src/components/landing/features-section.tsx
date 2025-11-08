@@ -26,10 +26,10 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="py-20 md:py-28 bg-white">
+    <section id="features" className="py-20 md:py-28 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Why Sell with LaunchPad?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Why Sell with Chocobe?</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
             We provide everything you need to build a successful online business.
           </p>
