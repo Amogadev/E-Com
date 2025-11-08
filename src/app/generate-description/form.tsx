@@ -15,7 +15,7 @@ import { Sparkles, Bot, Clipboard } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 
 const formSchema = z.object({
-  keywords: z.string().min(3, 'Please provide some keywords for your product.'),
+  keywords: z.string().min(3, 'Please provide some keywords for your furniture.'),
   features: z.string().min(10, 'Please describe a few key features.'),
 });
 
@@ -71,9 +71,9 @@ export function GenerateDescriptionForm() {
                                 name="keywords"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel className="text-base">Product Keywords</FormLabel>
+                                        <FormLabel className="text-base">Furniture Keywords</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="e.g., wireless, bluetooth, noise-cancelling headphones" {...field} />
+                                            <Input placeholder="e.g., mid-century modern, walnut, accent chair" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -84,10 +84,10 @@ export function GenerateDescriptionForm() {
                                 name="features"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel className="text-base">Product Features</FormLabel>
+                                        <FormLabel className="text-base">Furniture Features</FormLabel>
                                         <FormControl>
                                             <Textarea
-                                                placeholder="Describe the main features. e.g., 40-hour battery life, foldable design, built-in microphone, premium materials."
+                                                placeholder="Describe the main features. e.g., solid wood construction, velvet upholstery, tapered legs, ergonomic design."
                                                 className="min-h-[120px]"
                                                 {...field}
                                             />

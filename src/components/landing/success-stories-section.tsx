@@ -13,32 +13,32 @@ const stories = [
   {
     id: 'avatar-1',
     name: 'Sarah L.',
-    store: 'Artisan Creations',
-    quote: 'Chocobe transformed my hobby into a thriving business. The tools are intuitive and my sales have tripled in just six months!',
+    store: 'San Francisco, CA',
+    quote: 'Modern Nook transformed my small apartment into a cozy, functional space. The quality is amazing for the price!',
   },
   {
     id: 'avatar-2',
     name: 'Mike R.',
-    store: 'Gadget Grove',
-    quote: 'As a non-technical person, I was worried about starting an online store. Chocobe made it so easy. I was up and running in a day.',
+    store: 'Austin, TX',
+    quote: 'I\'m not a designer, but the AI tool helped me visualize my living room perfectly. The delivery was seamless and professional.',
   },
   {
     id: 'avatar-3',
     name: 'Jessica T.',
-    store: 'Vintage Finds',
-    quote: 'The global reach is incredible. I\'m now shipping my vintage clothing to customers on three different continents. Thank you, Chocobe!',
+    store: 'New York, NY',
+    quote: 'I\'m obsessed with my new dining set. It\'s the centerpiece of my home and I get so many compliments on it. Thank you, Modern Nook!',
   },
   {
     id: 'avatar-4',
     name: 'David Chen',
-    store: 'Home Brew Bros',
-    quote: 'The analytics tools are a game-changer. I can see exactly what\'s working and make smarter decisions for my business.',
+    store: 'Chicago, IL',
+    quote: 'The customer service team was so helpful in picking out the right bookshelf for my home office. It fits the space perfectly.',
     },
     {
     id: 'avatar-5',
     name: 'Emily Wada',
-    store: 'Petal Perfect',
-    quote: 'Customer support is top-notch. They\'re always quick to respond and incredibly helpful whenever I have a question.',
+    store: 'Los Angeles, CA',
+    quote: 'Finally, a furniture store that gets my style. Everything is so well-curated and unique. I\'ll be back for more!',
     }
 ];
 
@@ -47,9 +47,9 @@ export function SuccessStoriesSection() {
     <section className="pt-10 pb-14 md:pt-14 md:pb-24 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">See what our sellers have to say</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">See what our customers are saying</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Real stories from sellers who built their dreams on Chocobe.
+            Real stories from people who built their dream homes with Modern Nook.
           </p>
         </div>
         <Carousel

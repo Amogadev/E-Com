@@ -8,10 +8,10 @@ export function PromoBanner() {
         <Link href="#" className="inline-flex items-center gap-2 group">
             <Info className="h-5 w-5 text-accent" />
             <span className="font-medium">
-                Ready to start selling online? Get powered with 36k worth benefits.
+                Limited Time: Free shipping on all orders over $500!
             </span>
             <span className="underline group-hover:no-underline ml-1">
-                Explore now
+                Shop now
             </span>
         </Link>
       </div>

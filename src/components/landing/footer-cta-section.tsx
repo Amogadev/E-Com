@@ -1,40 +1,40 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Check, Gift, HandCoins, CalendarCheck } from 'lucide-react';
+import { Check, Gift, Percent, CalendarCheck } from 'lucide-react';
 import Link from 'next/link';
 
 const incentives = [
     {
-        id: 'new-seller',
+        id: 'new-member',
         icon: <Gift className="h-6 w-6 text-primary-foreground" />,
-        badge: 'Welcome Kit',
-        title: 'New Seller Welcome Kit',
+        badge: 'New Member Offer',
+        title: 'Your Welcome Gift',
         features: [
-            'Free access to our AI-powered listing generator.',
-            '$100 in ad credits to kickstart your marketing.',
-            'A one-on-one strategy session with an e-commerce expert.',
+            'Free access to our AI-powered room designer.',
+            '$50 off your first order of $500 or more.',
+            'A one-on-one consultation with a design expert.',
         ],
     },
     {
-        id: 'fee-drop',
-        icon: <HandCoins className="h-6 w-6 text-primary-foreground" />,
-        badge: 'Lower Fees',
-        title: 'Keep More of Your Earnings',
+        id: 'seasonal-sale',
+        icon: <Percent className="h-6 w-6 text-primary-foreground" />,
+        badge: 'Seasonal Sale',
+        title: 'Save on Style',
         features: [
-            'Flat 1% transaction fee on your first 100 sales.',
-            'Zero listing fees for your first 50 products.',
-            'Exclusive discounts on shipping and packaging supplies.',
+            'Up to 20% off select living room collections.',
+            'Special financing options available.',
+            'Exclusive deals on outdoor and patio furniture.',
         ],
     },
     {
-        id: 'payments',
+        id: 'insider-perks',
         icon: <CalendarCheck className="h-6 w-6 text-primary-foreground" />,
-        badge: 'Faster Payouts',
-        title: 'Get Paid Sooner',
+        badge: 'Insider Perks',
+        title: 'Join Our Community',
         features: [
-            'Access your earnings in as little as 3 business days.',
-            'Instant payouts available for a small convenience fee.',
-            'Transparent fee structure with no hidden charges.',
+            'Early access to new arrivals and sales events.',
+            'Invitations to exclusive design workshops.',
+            'Earn reward points on every purchase.',
         ],
     },
 ];
@@ -44,7 +44,7 @@ export function FooterCtaSection() {
     <section className="pt-10 pb-8 md:pt-14 md:pb-10 bg-secondary/50">
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline">Get a head-start to selling with us</h2>
+                <h2 className="text-3xl md:text-4xl font-bold font-headline">Start Designing Your Dream Home</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12">
                 {incentives.map((incentive) => (
@@ -73,7 +73,7 @@ export function FooterCtaSection() {
             </div>
             <div className="text-center mt-16">
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6 px-10 shadow-lg scale-100 hover:scale-105 transition-transform" asChild>
-                    <Link href="#">Create Your Seller Account</Link>
+                    <Link href="#">Sign Up & Save</Link>
                 </Button>
             </div>
         </div>

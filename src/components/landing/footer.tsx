@@ -9,13 +9,13 @@ export function Footer() {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <Logo />
             <p className="text-sm text-muted-foreground mt-2 max-w-xs">
-              The all-in-one platform to launch and scale your e-commerce business.
+              Design Your Space, Define Your Style.
             </p>
           </div>
           <nav className="flex flex-nowrap justify-center gap-x-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Features</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Success Stories</a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Collections</a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Design Services</a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Testimonials</a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">About Us</a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
@@ -27,7 +27,7 @@ export function Footer() {
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Facebook"><Facebook className="h-5 w-5" /></a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram"><Instagram className="h-5 w-5" /></a>
           </div>
-          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Chocobe. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Modern Nook. All rights reserved.</p>
         </div>
       </div>
     </footer>

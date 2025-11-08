@@ -44,7 +44,7 @@ export function LoginForm() {
                     <LogIn className="h-10 w-10 text-primary" />
                 </div>
                 <CardTitle className="text-3xl font-bold">Welcome Back!</CardTitle>
-                <CardDescription className="text-lg">Sign in to continue to your account.</CardDescription>
+                <CardDescription className="text-lg">Sign in to your Modern Nook account.</CardDescription>
             </CardHeader>
             <CardContent>
                 <Form {...form}>

@@ -1,25 +1,25 @@
-import { Users, Truck, Award, Handshake } from 'lucide-react';
+import { Users, Truck, Award, Sofa } from 'lucide-react';
 
 const stats = [
     {
         icon: <Users className="h-8 w-8 text-primary" />,
-        value: '300M+',
-        label: 'Unique visitors per year',
+        value: '1M+',
+        label: 'Happy customers nationwide',
     },
     {
         icon: <Truck className="h-8 w-8 text-primary" />,
-        value: '99.3%',
-        label: 'Pincode reach for delivery',
+        value: '98%',
+        label: 'Of metro areas covered',
     },
     {
         icon: <Award className="h-8 w-8 text-primary" />,
-        value: '38K+',
-        label: 'Sellers achieved highest-ever sales',
+        value: '500+',
+        label: 'Exclusive designs',
     },
     {
-        icon: <Handshake className="h-8 w-8 text-primary" />,
-        value: '14L+',
-        label: 'Sellers are selling on Chocobe',
+        icon: <Sofa className="h-8 w-8 text-primary" />,
+        value: '2,000+',
+        label: 'Items in our collection',
     },
 ];
 
@@ -29,7 +29,7 @@ export function BrandStatsSection() {
             <div className="bg-foreground text-background">
                 <div className="container mx-auto px-4 py-4 text-center">
                     <p className="font-medium text-lg">
-                        Join thousands of sellers who make their first sale in under 30 days!¹
+                        Find the perfect piece to complete your room today!
                     </p>
                 </div>
             </div>
@@ -37,7 +37,7 @@ export function BrandStatsSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
                     <div className="text-center lg:text-left">
                         <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                            Build your Brand with Us
+                            Why people choose Modern Nook
                         </h2>
                     </div>
                     <div className="lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-8">

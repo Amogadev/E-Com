@@ -4,8 +4,8 @@ import { Toaster } from "@/components/ui/toaster"
 import { HelpBot } from '@/components/landing/help-bot';
 
 export const metadata: Metadata = {
-  title: 'Chocobe',
-  description: 'Build. Sell. Shine.',
+  title: 'Modern Nook',
+  description: 'Design Your Space, Define Your Style.',
 };
 
 export default function RootLayout({

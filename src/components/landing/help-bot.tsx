@@ -15,9 +15,9 @@ export function HelpBot() {
 
   const handleClick = () => {
     toast({
-      title: 'Chocobe Support Bot',
+      title: 'Modern Nook Support',
       description:
-        'Our support bot is currently taking a nap. Please try again later!',
+        'Our design support bot is currently tidying up. Please try again later!',
     });
   };
 
@@ -36,7 +36,7 @@ export function HelpBot() {
           </Button>
         </TooltipTrigger>
         <TooltipContent side="left" className="bg-primary text-primary-foreground">
-          <p>Need help? Ask Chocobe Support Bot.</p>
+          <p>Need design help? Ask our support bot.</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
