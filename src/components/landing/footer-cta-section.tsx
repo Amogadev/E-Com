@@ -66,7 +66,6 @@ export function FooterCtaSection() {
                                         </li>
                                     ))}
                                 </ul>
-                                <Button variant="outline" className="w-full">Want to know more</Button>
                             </CardContent>
                         </Card>
                     </div>
