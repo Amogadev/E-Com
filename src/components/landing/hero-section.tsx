@@ -3,6 +3,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Circle, Triangle, Square } from 'lucide-react';
+import { SellerStats } from '@/components/landing/seller-stats';
 
 export function HeroSection() {
   const dashboardImage = PlaceHolderImages.find(img => img.id === 'dashboard-preview');
@@ -33,6 +34,9 @@ export function HeroSection() {
               <Button size="lg" variant="outline" className="shadow-sm bg-background/50" asChild>
                 <Link href="#">Learn More</Link>
               </Button>
+            </div>
+            <div className="mt-12 text-center md:text-left">
+                <SellerStats />
             </div>
           </div>
           <div className="relative h-64 md:h-auto md:aspect-[4/3] group">
