@@ -4,9 +4,9 @@ import Link from 'next/link';
 export function PromoBanner() {
   return (
     <div className="bg-foreground text-background">
-      <div className="container mx-auto px-4 py-2 text-center text-sm">
+      <div className="container mx-auto px-4 py-3 text-center text-base">
         <Link href="#" className="inline-flex items-center gap-2 group">
-            <Info className="h-4 w-4 text-accent" />
+            <Info className="h-5 w-5 text-accent" />
             <span className="font-medium">
                 Ready to start selling online? Get powered with 36k worth benefits.
             </span>
