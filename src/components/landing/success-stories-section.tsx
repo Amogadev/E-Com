@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { User } from 'lucide-react';
 
 const stories = [
   {
@@ -34,18 +34,15 @@ export function SuccessStoriesSection() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stories.map((story) => {
-                const avatar = PlaceHolderImages.find(img => img.id === story.id);
-                return (
+            {stories.map((story) => (
                     <Card key={story.name} className="bg-background shadow-lg flex flex-col">
                         <CardContent className="flex flex-col items-center text-center p-8 md:p-10 flex-grow">
                             <p className="text-lg font-medium mb-6 italic text-foreground/80 flex-grow">"{story.quote}"</p>
                             <div className="flex flex-col items-center gap-4">
                                 <Avatar className="h-20 w-20 border-2 border-primary/50 p-1">
-                                    {avatar && (
-                                        <AvatarImage src={avatar.imageUrl} alt={story.name} data-ai-hint={avatar.imageHint} />
-                                    )}
-                                    <AvatarFallback>{story.name.charAt(0)}</AvatarFallback>
+                                    <AvatarFallback>
+                                        <User className="h-10 w-10 text-muted-foreground" />
+                                    </AvatarFallback>
                                 </Avatar>
                                 <div>
                                     <p className="font-semibold text-xl">{story.name}</p>
@@ -55,7 +52,7 @@ export function SuccessStoriesSection() {
                         </CardContent>
                     </Card>
                 )
-            })}
+            )}
         </div>
       </div>
     </section>
