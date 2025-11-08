@@ -9,7 +9,7 @@ export function HeroSection() {
   const dashboardImage = PlaceHolderImages.find(img => img.id === 'dashboard-preview');
 
   return (
-    <section className="pt-24 md:pt-40 pb-16 md:pb-24 relative overflow-hidden bg-background">
+    <section className="pt-16 md:pt-28 pb-16 md:pb-24 relative overflow-hidden bg-background">
       <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-white to-fuchsia-50 -z-10"></div>
       
       {/* Floating Shapes */}
