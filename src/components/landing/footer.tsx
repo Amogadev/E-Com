@@ -20,13 +20,13 @@ export function Footer() {
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
           </nav>
-          <div className="flex gap-4">
+        </div>
+        <div className="mt-8 border-t pt-8 text-center">
+          <div className="flex justify-center gap-4 mb-4">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter"><Twitter className="h-5 w-5" /></a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Facebook"><Facebook className="h-5 w-5" /></a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram"><Instagram className="h-5 w-5" /></a>
           </div>
-        </div>
-        <div className="mt-8 border-t pt-8 text-center">
           <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Chocobe. All rights reserved.</p>
         </div>
       </div>
