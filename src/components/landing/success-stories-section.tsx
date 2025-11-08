@@ -1,5 +1,4 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
@@ -34,44 +33,30 @@ export function SuccessStoriesSection() {
             Real stories from sellers who built their dreams on Chocobe.
           </p>
         </div>
-        <Carousel
-          opts={{
-            align: 'start',
-            loop: true,
-          }}
-          className="w-full max-w-4xl mx-auto"
-        >
-          <CarouselContent>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stories.map((story) => {
                 const avatar = PlaceHolderImages.find(img => img.id === story.id);
                 return (
-                    <CarouselItem key={story.name}>
-                        <div className="p-1">
-                            <Card className="bg-background shadow-lg">
-                                <CardContent className="flex flex-col items-center text-center p-8 md:p-12">
-                                    <p className="text-xl font-medium mb-6 italic text-foreground/80">"{story.quote}"</p>
-                                    <div className="flex items-center gap-4">
-                                        <Avatar className="h-16 w-16 border-2 border-primary/50 p-1">
-                                            {avatar && (
-                                                <AvatarImage src={avatar.imageUrl} alt={story.name} data-ai-hint={avatar.imageHint} />
-                                            )}
-                                            <AvatarFallback>{story.name.charAt(0)}</AvatarFallback>
-                                        </Avatar>
-                                        <div>
-                                            <p className="font-semibold text-lg">{story.name}</p>
-                                            <p className="text-sm text-muted-foreground">{story.store}</p>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        </div>
-                    </CarouselItem>
+                    <Card key={story.name} className="bg-background shadow-lg flex flex-col">
+                        <CardContent className="flex flex-col items-center text-center p-8 md:p-10 flex-grow">
+                            <p className="text-lg font-medium mb-6 italic text-foreground/80 flex-grow">"{story.quote}"</p>
+                            <div className="flex flex-col items-center gap-4">
+                                <Avatar className="h-20 w-20 border-2 border-primary/50 p-1">
+                                    {avatar && (
+                                        <AvatarImage src={avatar.imageUrl} alt={story.name} data-ai-hint={avatar.imageHint} />
+                                    )}
+                                    <AvatarFallback>{story.name.charAt(0)}</AvatarFallback>
+                                </Avatar>
+                                <div>
+                                    <p className="font-semibold text-xl">{story.name}</p>
+                                    <p className="text-sm text-muted-foreground">{story.store}</p>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
                 )
             })}
-          </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex" />
-          <CarouselNext className="hidden sm:flex" />
-        </Carousel>
+        </div>
       </div>
     </section>
   );
