@@ -41,13 +41,7 @@ const menuItems = [
   { 
     label: 'Products', 
     icon: Package,
-    subMenu: [
-      { href: '/dashboard/products', label: 'List' },
-      { href: '/dashboard/products/grid', label: 'Grid' },
-      { href: '/dashboard/products/1', label: 'Details' },
-      { href: '/dashboard/products/1/edit', label: 'Edit' },
-      { href: '/dashboard/products/create', label: 'Create' },
-    ]
+    href: '/dashboard/products',
   },
   { href: '#', label: 'Customer', icon: Users },
   { href: '#', label: 'Orders', icon: ShoppingBag },
@@ -64,15 +58,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const isProductRoute = (path: string) => pathname.startsWith('/dashboard/products') && !pathname.includes('grid')
   
-  const getActiveState = (subItemHref: string, subItemLabel: string) => {
-    if (pathname === subItemHref) return true;
-    if (subItemLabel === 'Details' && isProductRoute(pathname) && !pathname.endsWith('edit')) return true;
-    if (subItemLabel === 'Edit' && isProductRoute(pathname) && pathname.endsWith('edit')) return true;
-    return false;
-  }
-
   return (
     <SidebarProvider>
       <Sidebar>
@@ -83,35 +69,15 @@ export default function DashboardLayout({
           <SidebarMenu>
             {menuItems.map((item) => (
               <SidebarMenuItem key={item.label}>
-                {item.subMenu ? (
-                  <SidebarSubMenu
-                    icon={item.icon}
-                    label={item.label}
-                    active={item.subMenu.some(sub => getActiveState(sub.href, sub.label) || pathname.startsWith(sub.href))}
-                  >
-                    {item.subMenu.map((subItem) => (
-                      <SidebarSubMenuItem key={subItem.label}>
-                        <Link href={subItem.href}>
-                          <SidebarSubMenuButton
-                            isActive={getActiveState(subItem.href, subItem.label)}
-                          >
-                            {subItem.label}
-                          </SidebarSubMenuButton>
-                        </Link>
-                      </SidebarSubMenuItem>
-                    ))}
-                  </SidebarSubMenu>
-                ) : (
                   <Link href={item.href!}>
                     <SidebarMenuButton
-                      isActive={pathname === item.href}
+                      isActive={pathname.startsWith(item.href!)}
                       icon={item.icon}
                       tooltip={item.label}
                     >
                       <span>{item.label}</span>
                     </SidebarMenuButton>
                   </Link>
-                )}
               </SidebarMenuItem>
             ))}
           </SidebarMenu>
