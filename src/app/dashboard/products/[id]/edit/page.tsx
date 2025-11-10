@@ -1,4 +1,3 @@
-
 'use client';
 
 import { products } from '../../data';
@@ -45,7 +44,8 @@ type FormValues = z.infer<typeof formSchema>;
 export default function EditProductPage({ params }: { params: { id: string } }) {
   const router = useRouter();
   const { toast } = useToast();
-  const product = products.find((p) => p.id === parseInt(params.id));
+  const productId = params.id;
+  const product = products.find((p) => p.id === parseInt(productId));
 
   if (!product) {
     notFound();
@@ -72,7 +72,7 @@ export default function EditProductPage({ params }: { params: { id: string } }) 
       title: 'Product Saved!',
       description: `${values.name} has been updated.`,
     });
-    router.push(`/dashboard/products/${params.id}`);
+    router.push(`/dashboard/products/${productId}`);
   };
 
   return (
@@ -84,7 +84,7 @@ export default function EditProductPage({ params }: { params: { id: string } }) 
             <CardDescription>Update the details for {product.name}.</CardDescription>
           </div>
           <Button variant="outline" size="sm" asChild>
-            <Link href={`/dashboard/products/${params.id}`}>
+            <Link href={`/dashboard/products/${productId}`}>
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Details
             </Link>

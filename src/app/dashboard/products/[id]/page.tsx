@@ -44,7 +44,8 @@ function Rating({ rating, reviewCount }: { rating: number; reviewCount: number }
 }
 
 export default function ProductDetailPage({ params }: { params: { id: string } }) {
-  const product = products.find((p) => p.id === parseInt(params.id));
+  const productId = params.id;
+  const product = products.find((p) => p.id === parseInt(productId));
 
   if (!product) {
     notFound();
