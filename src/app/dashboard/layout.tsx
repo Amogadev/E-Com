@@ -42,7 +42,7 @@ const menuItems = [
   },
   { href: '/dashboard/orders', label: 'Orders', icon: ShoppingBag },
   { href: '/dashboard/customers', label: 'Customer', icon: Users },
-  { href: '#', label: 'Shipment', icon: Compass },
+  { href: '/dashboard/shipment', label: 'Shipment', icon: Compass },
   { href: '#', label: 'Store Setting', icon: Store },
   { href: '#', label: 'Platform Partner', icon: Share2 },
   { href: '#', label: 'Feedback', icon: MessageSquare },
