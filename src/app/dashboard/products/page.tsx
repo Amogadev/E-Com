@@ -144,7 +144,7 @@ export default function ProductListPage() {
       </CardFooter>
     </Card>
     <footer className="text-center text-sm text-muted-foreground mt-4">
-      © {new Date().getFullYear()} chocobe. All rights reserved.
+      © 2025 chocobe.❤️
     </footer>
     </>
   );
