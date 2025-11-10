@@ -64,6 +64,7 @@ export const products = [
     name: 'Rustic Farmhouse Table',
     images: [
       { id: 1, url: p3_1?.imageUrl || 'https://picsum.photos/seed/p3-1/800/600' },
+      { id: 2, url: p1_2?.imageUrl || 'https://picsum.photos/seed/p1-2/800/600' },
     ],
     description: 'Gather your family around this beautiful rustic farmhouse dining table. Made from reclaimed pine, its character-rich surface tells a story. Seats up to six people comfortably.',
     price: 650.0,
@@ -124,6 +125,7 @@ export const products = [
     name: 'Industrial Bookshelf',
     images: [
       { id: 1, url: p6_1?.imageUrl || 'https://picsum.photos/seed/p6-1/800/600' },
+      { id: 2, url: p2_2?.imageUrl || 'https://picsum.photos/seed/p2-2/800/600' },
     ],
     description: 'Showcase your books and decor with this industrial-style bookshelf. The combination of metal and wood creates a chic, urban look that fits well in any modern office or living space.',
     price: 280.0,
@@ -163,6 +165,7 @@ export const products = [
     name: 'Minimalist Coffee Table',
     images: [
       { id: 1, url: p8_1?.imageUrl || 'https://picsum.photos/seed/p8-1/800/600' },
+      { id: 2, url: p1_3?.imageUrl || 'https://picsum.photos/seed/p1-3/800/600' },
     ],
     description: 'A sleek and simple coffee table that embodies minimalist design. Its clean lines and neutral color palette allow it to blend seamlessly into any living room setup.',
     price: 199.99,
