@@ -22,6 +22,7 @@ import { Button } from '@/components/ui/button';
 import { Star, Edit, Trash2, ArrowLeft } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { format } from 'date-fns';
+import React from 'react';
 
 function Rating({ rating, reviewCount }: { rating: number; reviewCount: number }) {
   return (
@@ -43,8 +44,8 @@ function Rating({ rating, reviewCount }: { rating: number; reviewCount: number }
   );
 }
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
-  const productId = params.id;
+export default function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id: productId } = React.use(params);
   const product = products.find((p) => p.id === parseInt(productId));
 
   if (!product) {

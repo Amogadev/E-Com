@@ -26,6 +26,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { ArrowLeft, Save, Upload } from 'lucide-react';
 import Link from 'next/link';
+import React from 'react';
 
 const formSchema = z.object({
   name: z.string().min(1, 'Product name is required'),
@@ -41,10 +42,10 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-export default function EditProductPage({ params }: { params: { id: string } }) {
+export default function EditProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id: productId } = React.use(params);
   const router = useRouter();
   const { toast } = useToast();
-  const productId = params.id;
   const product = products.find((p) => p.id === parseInt(productId));
 
   if (!product) {
