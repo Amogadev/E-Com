@@ -41,6 +41,15 @@ function getPageTitle(pathname: string) {
     if (pathname.startsWith('/dashboard/customers')) {
         return 'Customer List';
     }
+    if (pathname.startsWith('/dashboard/orders')) {
+        return 'Order List';
+    }
+    if (pathname.startsWith('/dashboard/shipment')) {
+        return 'Shipment List';
+    }
+    if (pathname.startsWith('/dashboard/settings')) {
+        return 'Store Setting';
+    }
     return 'Dashboard';
 }
 
