@@ -42,7 +42,7 @@ const menuItems = [
     label: 'Products', 
     icon: Package,
     subMenu: [
-      { href: '#', label: 'List' },
+      { href: '/dashboard/products', label: 'List' },
       { href: '#', label: 'Grid' },
       { href: '#', label: 'Details' },
       { href: '#', label: 'Edit' },
