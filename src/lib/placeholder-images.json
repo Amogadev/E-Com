@@ -104,9 +104,9 @@
     },
     {
       "id": "tshirt-preview",
-      "description": "A stylish minimalist chair.",
-      "imageUrl": "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=1964",
-      "imageHint": "minimalist chair"
+      "description": "A minimalist black t-shirt on a hanger.",
+      "imageUrl": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1974",
+      "imageHint": "black t-shirt"
     },
     {
       "id": "avatar-user",
@@ -119,6 +119,36 @@
       "description": "Avatar for a product reviewer.",
       "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974",
       "imageHint": "user profile"
+    },
+    {
+      "id": "avatar-1",
+      "description": "Portrait of a smiling woman.",
+      "imageUrl": "https://images.unsplash.com/photo-1557053910-d9eadeed1c58?q=80&w=1974",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "avatar-2",
+      "description": "Portrait of a smiling man.",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=2070",
+      "imageHint": "man smiling"
+    },
+    {
+      "id": "avatar-3",
+      "description": "Portrait of a woman with glasses.",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "avatar-4",
+      "description": "Portrait of a man in a cityscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2071",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "avatar-5",
+      "description": "Portrait of a smiling woman.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961",
+      "imageHint": "woman smiling"
     }
   ]
 }
