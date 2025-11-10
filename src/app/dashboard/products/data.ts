@@ -1,12 +1,30 @@
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const p1_1 = PlaceHolderImages.find(img => img.id === 'product-1-1');
+const p1_2 = PlaceHolderImages.find(img => img.id === 'product-1-2');
+const p1_3 = PlaceHolderImages.find(img => img.id === 'product-1-3');
+const p2_1 = PlaceHolderImages.find(img => img.id === 'product-2-1');
+const p2_2 = PlaceHolderImages.find(img => img.id === 'product-2-2');
+const p3_1 = PlaceHolderImages.find(img => img.id === 'product-3-1');
+const p4_1 = PlaceHolderImages.find(img => img.id === 'product-4-1');
+const p4_2 = PlaceHolderImages.find(img => img.id === 'product-4-2');
+const p4_3 = PlaceHolderImages.find(img => img.id === 'product-4-3');
+const p5_1 = PlaceHolderImages.find(img => img.id === 'product-5-1');
+const p5_2 = PlaceHolderImages.find(img => img.id === 'product-5-2');
+const p6_1 = PlaceHolderImages.find(img => img.id === 'product-6-1');
+const p7_1 = PlaceHolderImages.find(img => img.id === 'product-7-1');
+const p7_2 = PlaceHolderImages.find(img => img.id === 'product-7-2');
+const p8_1 = PlaceHolderImages.find(img => img.id === 'product-8-1');
+
 
 export const products = [
   {
     id: 1,
     name: 'Elegant Velvet Sofa',
     images: [
-      { id: 1, url: 'https://picsum.photos/seed/p1-1/800/600' },
-      { id: 2, url: 'https://picsum.photos/seed/p1-2/800/600' },
-      { id: 3, url: 'https://picsum.photos/seed/p1-3/800/600' },
+      { id: 1, url: p1_1?.imageUrl || 'https://picsum.photos/seed/p1-1/800/600' },
+      { id: 2, url: p1_2?.imageUrl || 'https://picsum.photos/seed/p1-2/800/600' },
+      { id: 3, url: p1_3?.imageUrl || 'https://picsum.photos/seed/p1-3/800/600' },
     ],
     description: 'A luxurious and comfortable sofa, upholstered in premium velvet. Its timeless design and plush cushions make it the perfect centerpiece for any modern living room. Built with a sturdy hardwood frame for lasting durability.',
     price: 899.99,
@@ -25,8 +43,8 @@ export const products = [
     id: 2,
     name: 'Mid-Century Modern Desk',
     images: [
-      { id: 1, url: 'https://picsum.photos/seed/p2-1/800/600' },
-      { id: 2, url: 'https://picsum.photos/seed/p2-2/800/600' },
+      { id: 1, url: p2_1?.imageUrl || 'https://picsum.photos/seed/p2-1/800/600' },
+      { id: 2, url: p2_2?.imageUrl || 'https://picsum.photos/seed/p2-2/800/600' },
     ],
     description: 'Bring a touch of classic style to your workspace with this mid-century modern desk. Featuring clean lines, tapered legs, and ample storage with two drawers, it combines functionality with iconic design.',
     price: 349.99,
@@ -45,7 +63,7 @@ export const products = [
     id: 3,
     name: 'Rustic Farmhouse Table',
     images: [
-      { id: 1, url: 'https://picsum.photos/seed/p3-1/800/600' },
+      { id: 1, url: p3_1?.imageUrl || 'https://picsum.photos/seed/p3-1/800/600' },
     ],
     description: 'Gather your family around this beautiful rustic farmhouse dining table. Made from reclaimed pine, its character-rich surface tells a story. Seats up to six people comfortably.',
     price: 650.0,
@@ -64,9 +82,9 @@ export const products = [
     id: 4,
     name: 'Upholstered Queen Bed',
     images: [
-      { id: 1, url: 'https://picsum.photos/seed/p4-1/800/600' },
-      { id: 2, url: 'https://picsum.photos/seed/p4-2/800/600' },
-      { id: 3, url: 'https://picsum.photos/seed/p4-3/800/600' },
+      { id: 1, url: p4_1?.imageUrl || 'https://picsum.photos/seed/p4-1/800/600' },
+      { id: 2, url: p4_2?.imageUrl || 'https://picsum.photos/seed/p4-2/800/600' },
+      { id: 3, url: p4_3?.imageUrl || 'https://picsum.photos/seed/p4-3/800/600' },
     ],
     description: 'Create a serene and stylish bedroom with this upholstered queen bed. The soft, padded headboard is perfect for leaning against while reading, and the neutral fabric complements any decor.',
     price: 599.0,
@@ -85,8 +103,8 @@ export const products = [
     id: 5,
     name: 'Leather Recliner Chair',
     images: [
-      { id: 1, url: 'https://picsum.photos/seed/p5-1/800/600' },
-      { id: 2, url: 'https://picsum.photos/seed/p5-2/800/600' },
+      { id: 1, url: p5_1?.imageUrl || 'https://picsum.photos/seed/p5-1/800/600' },
+      { id: 2, url: p5_2?.imageUrl || 'https://picsum.photos/seed/p5-2/800/600' },
     ],
     description: 'Unwind in ultimate comfort with this luxurious leather recliner. Featuring plush padding and a smooth reclining mechanism, it\'s the perfect spot for relaxation after a long day.',
     price: 720.0,
@@ -105,7 +123,7 @@ export const products = [
     id: 6,
     name: 'Industrial Bookshelf',
     images: [
-      { id: 1, url: 'https://picsum.photos/seed/p6-1/800/600' },
+      { id: 1, url: p6_1?.imageUrl || 'https://picsum.photos/seed/p6-1/800/600' },
     ],
     description: 'Showcase your books and decor with this industrial-style bookshelf. The combination of metal and wood creates a chic, urban look that fits well in any modern office or living space.',
     price: 280.0,
@@ -124,8 +142,8 @@ export const products = [
     id: 7,
     name: 'Bohemian Style Armchair',
     images: [
-      { id: 1, url: 'https://picsum.photos/seed/p7-1/800/600' },
-      { id: 2, url: 'https://picsum.photos/seed/p7-2/800/600' },
+      { id: 1, url: p7_1?.imageUrl || 'https://picsum.photos/seed/p7-1/800/600' },
+      { id: 2, url: p7_2?.imageUrl || 'https://picsum.photos/seed/p7-2/800/600' },
     ],
     description: 'Add a touch of boho charm to your home with this stylish armchair. Its natural rattan frame and comfortable cushion make it an inviting and eye-catching accent piece.',
     price: 420.0,
@@ -144,7 +162,7 @@ export const products = [
     id: 8,
     name: 'Minimalist Coffee Table',
     images: [
-      { id: 1, url: 'https://picsum.photos/seed/p8-1/800/600' },
+      { id: 1, url: p8_1?.imageUrl || 'https://picsum.photos/seed/p8-1/800/600' },
     ],
     description: 'A sleek and simple coffee table that embodies minimalist design. Its clean lines and neutral color palette allow it to blend seamlessly into any living room setup.',
     price: 199.99,

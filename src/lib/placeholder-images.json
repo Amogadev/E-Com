@@ -3,32 +3,122 @@
     {
       "id": "dashboard-preview",
       "description": "A stylish and modern living room with a comfortable sofa and elegant decor.",
-      "imageUrl": "https://images.unsplash.com/photo-1599696848652-f0ff23bc911f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8ZnVybml0dXJlfGVufDB8fHx8MTc2MjYwNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmdXJuaXR1cmV8ZW58MHx8fHwxNzYyNjA2MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern furniture"
-    },
-    {
-      "id": "avatar-1",
-      "description": "Avatar for a happy customer.",
-      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8fDE3NjI4NTQ0MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "portrait woman"
-    },
-    {
-      "id": "avatar-2",
-      "description": "Avatar for another happy customer.",
-      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbnxlbnwwfHx8fDE3NjI4NTQ0MzR8MA&ixlib:rb-4.1.0&q=80&w=1080",
-      "imageHint": "portrait man"
-    },
-    {
-      "id": "avatar-3",
-      "description": "Avatar for a third happy customer.",
-      "imageUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NjI4NTQ0NTV8MA&ixlib:rb-4.1.0&q=80&w=1080",
-      "imageHint": "portrait professional"
     },
     {
       "id": "packaging-delivery",
       "description": "Furniture being carefully packed for delivery.",
-      "imageUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmdXJuaXR1cmV8ZW58MHx8fHwxNzYyNjA2MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmdXJuaXR1cmV8ZW58MHx8fHwxNzYyNjA2MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "furniture delivery"
+    },
+    {
+      "id": "product-1-1",
+      "description": "An elegant velvet sofa in a modern living room setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmdXJuaXR1cmV8ZW58MHx8fHwxNzYyNjA2MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "velvet sofa"
+    },
+    {
+      "id": "product-1-2",
+      "description": "Close-up of the elegant velvet sofa's texture.",
+      "imageUrl": "https://images.unsplash.com/photo-1567016432779-1fee84122136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmdXJuaXR1cmV8ZW58MHx8fHwxNzYyNjA2MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sofa texture"
+    },
+    {
+      "id": "product-1-3",
+      "description": "Elegant velvet sofa from another angle.",
+      "imageUrl": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmdXJuaXR1cmV8ZW58MHx8fHwxNzYyNjA2MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sofa angle"
+    },
+    {
+      "id": "product-2-1",
+      "description": "A mid-century modern desk in a home office.",
+      "imageUrl": "https://images.unsplash.com/photo-1593079909461-32b5a15ba857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmdXJuaXR1cmV8ZW58MHx8fHwxNzYyNjA2MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern desk"
+    },
+    {
+      "id": "product-2-2",
+      "description": "Detail of the mid-century modern desk's wood grain.",
+      "imageUrl": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmdXJuaXR1cmV8ZW58MHx8fHwxNzYyNjA2MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "desk detail"
+    },
+    {
+      "id": "product-3-1",
+      "description": "A rustic farmhouse dining table.",
+      "imageUrl": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmdXJuaXR1cmV8ZW58MHx8fHwxNzYyNjA2MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dining table"
+    },
+    {
+      "id": "product-4-1",
+      "description": "An upholstered queen bed with a tufted headboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZnVybml0dXJlfGVufDB8fHx8MTc2MjYwNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "queen bed"
+    },
+    {
+      "id": "product-4-2",
+      "description": "Side view of the upholstered queen bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1560185012-1d4e1ac1b453?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8ZnVybml0dXJlfGVufDB8fHx8MTc2MjYwNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bed sideview"
+    },
+    {
+      "id": "product-4-3",
+      "description": "Close-up of the bed's upholstery fabric.",
+      "imageUrl": "https://images.unsplash.com/photo-1567016526134-3c6c026922de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8ZnVybml0dXJlfGVufDB8fHx8MTc2MjYwNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fabric texture"
+    },
+    {
+      "id": "product-5-1",
+      "description": "A comfortable leather recliner chair.",
+      "imageUrl": "https://images.unsplash.com/photo-1567016507665-385e00c377f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxM3x8ZnVybml0dXJlfGVufDB8fHx8MTc2MjYwNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather chair"
+    },
+    {
+      "id": "product-5-2",
+      "description": "Side view of the leather recliner chair.",
+      "imageUrl": "https://images.unsplash.com/photo-1616627781431-d85c8843734d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNHx8ZnVybml0dXJlfGVufDB8fHx8MTc2MjYwNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chair sideview"
+    },
+    {
+      "id": "product-6-1",
+      "description": "An industrial bookshelf with books and decor.",
+      "imageUrl": "https://images.unsplash.com/photo-1592078615290-033ee584e267?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNnx8ZnVybml0dXJlfGVufDB8fHx8MTc2MjYwNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bookshelf decor"
+    },
+    {
+      "id": "product-7-1",
+      "description": "A bohemian style armchair with a rattan frame.",
+      "imageUrl": "https://images.unsplash.com/photo-1598421415442-7a9b1a5a40a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxN3x8ZnVybml0dXJlfGVufDB8fHx8MTc2MjYwNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rattan armchair"
+    },
+    {
+      "id": "product-7-2",
+      "description": "Close-up of the bohemian armchair's woven texture.",
+      "imageUrl": "https://images.unsplash.com/photo-1551029224-8178a9c2d13b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8ZnVybml0dXJlfGVufDB8fHx8MTc2MjYwNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woven texture"
+    },
+    {
+      "id": "product-8-1",
+      "description": "A minimalist coffee table in a bright living room.",
+      "imageUrl": "https://images.unsplash.com/photo-1618220179428-22790b461013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8ZnVybml0dXJlfGVufDB8fHx8MTc2MjYwNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee table"
+    },
+    {
+      "id": "tshirt-preview",
+      "description": "A plain black t-shirt on a hanger.",
+      "imageUrl": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0c2hpcnR8ZW58MHx8fHwxNzYzOTI3OTUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "black t-shirt"
+    },
+    {
+      "id": "avatar-user",
+      "description": "A generic user avatar.",
+      "imageUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx1c2VyJTIwYXZhdGFyfGVufDB8fHx8MTc2MzkzMDM1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "user avatar"
+    },
+    {
+      "id": "reviewer-1",
+      "description": "Avatar for a product reviewer.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1c2VyJTIwcHJvZmlsZXxlbnwwfHx8fDE3NjM5MzA0NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "user profile"
     }
   ]
 }

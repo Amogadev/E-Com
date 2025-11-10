@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import { products } from '../data';
@@ -19,6 +17,7 @@ import { Separator } from '@/components/ui/separator';
 import React, { useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { format } from 'date-fns';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 function Rating({ rating, reviewCount }: { rating: number; reviewCount: number }) {
   return (
@@ -68,6 +67,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   const product = products.find((p) => p.id === parseInt(productId));
   const [selectedImage, setSelectedImage] = useState(product?.images[0].url);
   const [quantity, setQuantity] = useState(1);
+  const reviewerImage = PlaceHolderImages.find(img => img.id === 'reviewer-1');
 
   if (!product) {
     notFound();
@@ -251,7 +251,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                     <div className="space-y-4">
                         <div className="flex items-start gap-4">
                             <Avatar>
-                                <AvatarImage src="https://picsum.photos/seed/reviewer1/40/40" />
+                                <AvatarImage src={reviewerImage?.imageUrl} />
                                 <AvatarFallback>HK</AvatarFallback>
                             </Avatar>
                             <div>

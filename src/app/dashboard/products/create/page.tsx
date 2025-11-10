@@ -34,6 +34,7 @@ import { Save, UploadCloud } from 'lucide-react';
 import React from 'react';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const formSchema = z.object({
   name: z.string().min(1, 'Product name is required'),
@@ -58,6 +59,7 @@ const genders = ['Men', 'Women', 'Unisex'];
 export default function CreateProductPage() {
   const router = useRouter();
   const { toast } = useToast();
+  const tshirtImage = PlaceHolderImages.find(img => img.id === 'tshirt-preview');
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -99,7 +101,7 @@ export default function CreateProductPage() {
               <CardContent className="p-0">
                   <div className="relative aspect-[4/3] w-full bg-secondary flex items-center justify-center">
                       <Image
-                          src="https://picsum.photos/seed/tshirt-preview/800/600"
+                          src={tshirtImage?.imageUrl || "https://picsum.photos/seed/tshirt-preview/800/600"}
                           alt={watchedValues.name || "Product Preview"}
                           fill
                           className="object-cover"

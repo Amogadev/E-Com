@@ -16,6 +16,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 function getPageTitle(pathname: string) {
     if (pathname === '/dashboard/products/create') {
@@ -44,6 +45,8 @@ export function DashboardHeader() {
     const title = getPageTitle(pathname);
     const { toast } = useToast();
     const [theme, setTheme] = useState('light');
+    const avatarImage = PlaceHolderImages.find(img => img.id === 'avatar-user');
+
 
     useEffect(() => {
         const localTheme = localStorage.getItem('theme');
@@ -112,7 +115,7 @@ export function DashboardHeader() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Avatar className="h-8 w-8 cursor-pointer">
-                    <AvatarImage src="https://picsum.photos/seed/avatar/40/40" alt="User avatar" />
+                    <AvatarImage src={avatarImage?.imageUrl} alt="User avatar" />
                     <AvatarFallback>
                         <User className="h-5 w-5" />
                     </AvatarFallback>

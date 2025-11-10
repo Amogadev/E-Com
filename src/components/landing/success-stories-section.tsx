@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { User } from 'lucide-react';
 import {
     Carousel,
@@ -8,6 +8,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const stories = [
   {
@@ -60,7 +61,9 @@ export function SuccessStoriesSection() {
           className="w-full"
         >
           <CarouselContent>
-            {stories.map((story) => (
+            {stories.map((story) => {
+                const avatarImage = PlaceHolderImages.find(img => img.id === story.id);
+                return(
                 <CarouselItem key={story.id} className="md:basis-1/2 lg:basis-1/3">
                      <div className="p-1 h-full">
                         <Card className="bg-background shadow-lg flex flex-col h-full">
@@ -68,6 +71,7 @@ export function SuccessStoriesSection() {
                                 <p className="text-lg font-medium mb-6 italic text-foreground/80 flex-grow">"{story.quote}"</p>
                                 <div className="flex flex-col items-center gap-4">
                                     <Avatar className="h-20 w-20 border-2 border-primary/50 p-1">
+                                        <AvatarImage src={avatarImage?.imageUrl} alt={story.name} />
                                         <AvatarFallback>
                                             <User className="h-10 w-10 text-muted-foreground" />
                                         </AvatarFallback>
@@ -82,7 +86,7 @@ export function SuccessStoriesSection() {
                      </div>
                 </CarouselItem>
                 )
-            )}
+            })}
           </CarouselContent>
           <CarouselPrevious className="hidden md:flex" />
           <CarouselNext className="hidden md:flex" />
