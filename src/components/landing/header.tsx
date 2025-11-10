@@ -12,7 +12,7 @@ export function Header() {
             <Link href="/login">Login</Link>
           </Button>
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base" asChild>
-            <Link href="/generate-description">Start Selling</Link>
+            <Link href="/dashboard/products">Our Products</Link>
           </Button>
         </nav>
       </div>
