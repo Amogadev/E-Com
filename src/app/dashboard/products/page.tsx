@@ -143,9 +143,6 @@ export default function ProductListPage() {
         </div>
       </CardFooter>
     </Card>
-    <footer className="text-center text-sm text-muted-foreground mt-4">
-      © 2025 chocobe.❤️
-    </footer>
     </>
   );
 }

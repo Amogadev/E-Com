@@ -123,6 +123,9 @@ export default function DashboardLayout({
       <SidebarInset>
         <DashboardHeader />
         <main className="p-4 md:p-6">{children}</main>
+        <footer className="text-center text-sm text-muted-foreground p-4">
+          © 2025 chocobe.
+        </footer>
       </SidebarInset>
     </SidebarProvider>
   );

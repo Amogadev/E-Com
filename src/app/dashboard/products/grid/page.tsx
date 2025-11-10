@@ -188,9 +188,6 @@ export default function ProductGridPage() {
                 </div>
             </div>
 
-            <footer className="text-center text-sm text-muted-foreground mt-8">
-                © 2025 chocobe.❤️
-            </footer>
         </div>
     </div>
   );
