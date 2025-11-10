@@ -1,4 +1,6 @@
 
+'use client';
+
 import { products } from '../data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -6,23 +8,12 @@ import Link from 'next/link';
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
 } from '@/components/ui/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Star, Edit, Trash2, ArrowLeft } from 'lucide-react';
+import { Star, ShoppingCart, Heart, Minus, Plus } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-import { format } from 'date-fns';
-import React from 'react';
+import React, { useState } from 'react';
 
 function Rating({ rating, reviewCount }: { rating: number; reviewCount: number }) {
   return (
@@ -47,90 +38,129 @@ function Rating({ rating, reviewCount }: { rating: number; reviewCount: number }
 export default function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id: productId } = React.use(params);
   const product = products.find((p) => p.id === parseInt(productId));
+  const [selectedImage, setSelectedImage] = useState(product?.images[0].url);
+  const [quantity, setQuantity] = useState(1);
 
   if (!product) {
     notFound();
   }
-  
+
   const discountedPrice = product.price * (1 - product.discount / 100);
 
+  const handleQuantityChange = (amount: number) => {
+    setQuantity((prev) => Math.max(1, prev + amount));
+  };
+
   return (
-    <div className="container mx-auto py-8">
-      <Card>
-        <div className="grid md:grid-cols-2 gap-8">
-          <CardContent className="p-6">
-            <Carousel className="w-full">
-              <CarouselContent>
-                {product.images.map((image) => (
-                  <CarouselItem key={image.id}>
-                    <div className="aspect-square relative w-full overflow-hidden rounded-lg">
-                      <Image
-                        src={image.url}
-                        alt={`${product.name} image ${image.id}`}
-                        fill
-                        className="object-cover"
-                      />
+    <Card>
+        <CardContent className="p-6 md:p-8">
+            <div className="grid md:grid-cols-2 gap-8">
+                {/* Left Column: Image Gallery */}
+                <div>
+                    <div className="aspect-square relative w-full overflow-hidden rounded-lg bg-secondary mb-4">
+                        <Image
+                            src={selectedImage || product.images[0].url}
+                            alt={`${product.name} image`}
+                            fill
+                            className="object-cover"
+                        />
                     </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </CardContent>
-          
-          <CardContent className="p-6 flex flex-col justify-center">
-            <div className="flex justify-between items-start mb-4">
-              <CardHeader className="p-0">
-                  <CardTitle className="text-3xl font-bold">{product.name}</CardTitle>
-              </CardHeader>
-              <Button variant="outline" size="sm" asChild>
-                  <Link href="/dashboard/products">
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Back to List
-                  </Link>
-              </Button>
-            </div>
+                    <div className="grid grid-cols-4 gap-4">
+                        {product.images.map((image) => (
+                        <div
+                            key={image.id}
+                            className={`aspect-square relative w-full overflow-hidden rounded-md cursor-pointer border-2 ${selectedImage === image.url ? 'border-primary' : 'border-transparent'}`}
+                            onClick={() => setSelectedImage(image.url)}
+                        >
+                            <Image
+                            src={image.url}
+                            alt={`${product.name} thumbnail ${image.id}`}
+                            fill
+                            className="object-cover"
+                            />
+                        </div>
+                        ))}
+                    </div>
+                    <div className="mt-6 flex gap-2">
+                      <Button size="lg" className="w-full">
+                        <ShoppingCart className="mr-2 h-5 w-5" />
+                        Add To Cart
+                      </Button>
+                      <Button size="lg" variant="outline" className="w-full">
+                        Buy Now
+                      </Button>
+                      <Button size="lg" variant="outline" className="text-destructive hover:text-destructive">
+                          <Heart className="h-5 w-5" />
+                      </Button>
+                    </div>
+                </div>
 
-            <Rating rating={product.rating} reviewCount={product.reviews} />
-            
-            <Separator className="my-4" />
-            
-            <p className="text-muted-foreground mb-4">{product.description}</p>
-            
-            <div className="flex items-baseline gap-2 mb-4">
-              <span className="text-3xl font-bold text-primary">${discountedPrice.toFixed(2)}</span>
-              {product.discount > 0 && (
-                <span className="text-lg text-muted-foreground line-through">${product.price.toFixed(2)}</span>
-              )}
-            </div>
-            
-            <div className="mb-6">
-                {product.stock > 0 ? (
-                    <Badge className="bg-green-500 text-white text-sm">In Stock ({product.stock} available)</Badge>
-                ) : (
-                    <Badge variant="destructive" className="text-sm">Out of Stock</Badge>
-                )}
-            </div>
+                {/* Right Column: Product Info */}
+                <div>
+                    <Badge className="bg-green-500 text-white mb-2">New Arrival</Badge>
+                    <h1 className="text-3xl font-bold mb-3">{product.name}</h1>
 
-            <div className="grid grid-cols-2 gap-4 text-sm text-muted-foreground mb-6">
-                <div><span className="font-semibold text-foreground">Category:</span> {product.category}</div>
-                <div><span className="font-semibold text-foreground">Color:</span> {product.color}</div>
-                <div><span className="font-semibold text-foreground">Material:</span> {product.material}</div>
-                <div><span className="font-semibold text-foreground">Dimensions:</span> {product.dimensions}</div>
-                <div><span className="font-semibold text-foreground">Created:</span> {format(new Date(product.createdAt), 'MMM d, yyyy')}</div>
-                <div><span className="font-semibold text-foreground">Updated:</span> {format(new Date(product.updatedAt), 'MMM d, yyyy')}</div>
-            </div>
+                    <Rating rating={product.rating} reviewCount={product.reviews} />
+                    
+                    <Separator className="my-4" />
+                    
+                    <div className="flex items-baseline gap-2 mb-4">
+                        <span className="text-4xl font-bold text-primary">${discountedPrice.toFixed(2)}</span>
+                        {product.discount > 0 && (
+                            <>
+                                <span className="text-xl text-muted-foreground line-through">${product.price.toFixed(2)}</span>
+                                <Badge variant="destructive">({product.discount}% Off)</Badge>
+                            </>
+                        )}
+                    </div>
+                    
+                    <div className="flex gap-8 mb-6">
+                        <div>
+                            <p className="font-semibold mb-2">Colors &gt; <span className="text-muted-foreground">{product.color}</span></p>
+                            <div className="flex gap-2">
+                                <Button size="icon" className="rounded-full border-2 border-primary" style={{backgroundColor: 'navy'}}><span className="sr-only">Dark</span></Button>
+                                <Button size="icon" className="rounded-full" style={{backgroundColor: 'orange'}}><span className="sr-only">Yellow</span></Button>
+                                <Button size="icon" className="rounded-full" style={{backgroundColor: 'white'}}><span className="sr-only">White</span></Button>
+                                <Button size-="icon" className="rounded-full" style={{backgroundColor: 'green'}}><span className="sr-only">Green</span></Button>
+                            </div>
+                        </div>
+                        <div>
+                            <p className="font-semibold mb-2">Size &gt; <span className="text-muted-foreground">M</span></p>
+                             <div className="flex gap-2">
+                                <Button variant="outline">S</Button>
+                                <Button>M</Button>
+                                <Button variant="outline">XI</Button>
+                                <Button variant="outline">XXL</Button>
+                            </div>
+                        </div>
+                    </div>
 
-            <div className="flex gap-2">
-                <Button size="lg" asChild><Link href={`/dashboard/products/${product.id}/edit`}><Edit className="mr-2 h-4 w-4" /> Edit Product</Link></Button>
-                <Button size="lg" variant="outline" className="text-destructive hover:text-destructive">
-                    <Trash2 className="mr-2 h-4 w-4" /> Delete
-                </Button>
+                    <div className="mb-6">
+                        <p className="font-semibold mb-2">Quantity :</p>
+                        <div className="flex items-center gap-2">
+                            <Button variant="outline" size="icon" onClick={() => handleQuantityChange(-1)}><Minus className="h-4 w-4" /></Button>
+                            <span className="text-lg font-bold w-10 text-center">{quantity}</span>
+                            <Button variant="outline" size="icon" onClick={() => handleQuantityChange(1)}><Plus className="h-4 w-4" /></Button>
+                        </div>
+                    </div>
+                    
+                    <div className="space-y-2 text-sm text-green-600 mb-6">
+                        {product.stock > 0 ? (
+                            <p>✓ In Stock</p>
+                        ) : (
+                            <p className="text-red-500">X Out of Stock</p>
+                        )}
+                        <p>✓ Free delivery available</p>
+                        <p>✓ Sales 10% Off Use Code: CODE123</p>
+                    </div>
+
+                    <div>
+                        <h3 className="font-semibold mb-2">Description :</h3>
+                        <p className="text-muted-foreground">{product.description}</p>
+                    </div>
+                </div>
             </div>
-          </CardContent>
-        </div>
-      </Card>
-    </div>
+        </CardContent>
+    </Card>
   );
 }
