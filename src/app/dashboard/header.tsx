@@ -18,6 +18,9 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 function getPageTitle(pathname: string) {
+    if (pathname.startsWith('/dashboard/products/grid')) {
+        return 'Product Grid';
+    }
     if (pathname.startsWith('/dashboard/products')) {
         return 'Product List';
     }

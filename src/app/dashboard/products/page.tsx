@@ -28,69 +28,7 @@ import {
     SelectTrigger,
     SelectValue,
   } from "@/components/ui/select"
-
-const products = [
-  {
-    id: 1,
-    name: 'Elegant Velvet Sofa',
-    imageUrl: 'https://picsum.photos/seed/p1/200/200',
-    dimensions: '84"W x 36"D x 34"H',
-    price: 899.99,
-    stock: 120,
-    sold: 45,
-    category: 'Living Room',
-    rating: 4.8,
-    reviews: 125,
-  },
-  {
-    id: 2,
-    name: 'Mid-Century Modern Desk',
-    imageUrl: 'https://picsum.photos/seed/p2/200/200',
-    dimensions: '48"W x 24"D x 30"H',
-    price: 349.99,
-    stock: 75,
-    sold: 22,
-    category: 'Office',
-    rating: 4.7,
-    reviews: 98,
-  },
-  {
-    id: 3,
-    name: 'Rustic Farmhouse Table',
-    imageUrl: 'https://picsum.photos/seed/p3/200/200',
-    dimensions: '72"W x 36"D x 30"H',
-    price: 650.0,
-    stock: 50,
-    sold: 15,
-    category: 'Dining',
-    rating: 4.9,
-    reviews: 150,
-  },
-  {
-    id: 4,
-    name: 'Upholstered Queen Bed',
-    imageUrl: 'https://picsum.photos/seed/p4/200/200',
-    dimensions: '64"W x 85"D x 45"H',
-    price: 599.0,
-    stock: 90,
-    sold: 30,
-    category: 'Bedroom',
-    rating: 4.6,
-    reviews: 110,
-  },
-  {
-    id: 5,
-    name: 'Leather Recliner Chair',
-    imageUrl: 'https://picsum.photos/seed/p5/200/200',
-    dimensions: '38"W x 40"D x 42"H',
-    price: 720.0,
-    stock: 65,
-    sold: 18,
-    category: 'Living Room',
-    rating: 4.8,
-    reviews: 95,
-  },
-];
+import { products } from './data';
 
 export default function ProductListPage() {
   return (
@@ -127,7 +65,7 @@ export default function ProductListPage() {
               <TableHead className="w-[50px]">
                 <Checkbox />
               </TableHead>
-              <TableHead className="min-w-[250px]">Product Name & Size</TableHead>
+              <TableHead className="min-w-[250px]">Product Name</TableHead>
               <TableHead>Price</TableHead>
               <TableHead>Stock</TableHead>
               <TableHead>Category</TableHead>
@@ -147,15 +85,13 @@ export default function ProductListPage() {
                       <Image
                         src={product.imageUrl}
                         alt={product.name}
-                        fill
+                        width={64}
+                        height={64}
                         className="object-cover"
                       />
                     </div>
                     <div>
                       <p className="font-medium">{product.name}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {product.dimensions}
-                      </p>
                     </div>
                   </div>
                 </TableCell>
@@ -163,7 +99,6 @@ export default function ProductListPage() {
                 <TableCell>
                   <div>
                     <p>{product.stock} Item Left</p>
-                    <p className="text-sm text-muted-foreground">{product.sold} Sold</p>
                   </div>
                 </TableCell>
                 <TableCell>
@@ -173,7 +108,6 @@ export default function ProductListPage() {
                   <div className="flex items-center gap-1">
                     <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
                     <span className="font-medium">{product.rating.toFixed(1)}</span>
-                    <span className="text-sm text-muted-foreground">({product.reviews} Reviews)</span>
                   </div>
                 </TableCell>
                 <TableCell className="text-right">
