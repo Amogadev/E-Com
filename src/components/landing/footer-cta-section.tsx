@@ -49,7 +49,7 @@ export function FooterCtaSection() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12">
                 {incentives.map((incentive) => (
                     <div key={incentive.id} className="relative">
-                        <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-accent p-3 rounded-full shadow-lg border-4 border-secondary/50">
+                        <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-primary p-3 rounded-full shadow-lg border-4 border-secondary/50">
                             {incentive.icon}
                         </div>
                         <Card className="text-center h-full flex flex-col pt-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
