@@ -1,7 +1,7 @@
 
 'use client';
 
-import { products } from '../../../data';
+import { products } from '../../data';
 import { notFound, useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
