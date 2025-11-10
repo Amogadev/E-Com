@@ -19,6 +19,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Eye, Edit, Trash2, Star, PlusCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -83,7 +84,7 @@ export default function ProductListPage() {
                   <div className="flex items-center gap-4">
                     <div className="relative h-16 w-16 rounded-md overflow-hidden">
                       <Image
-                        src={product.imageUrl}
+                        src={product.images[0].url}
                         alt={product.name}
                         width={64}
                         height={64}
@@ -112,8 +113,10 @@ export default function ProductListPage() {
                 </TableCell>
                 <TableCell className="text-right">
                   <div className="flex justify-end gap-2">
-                    <Button variant="ghost" size="icon">
-                      <Eye className="h-4 w-4" />
+                    <Button variant="ghost" size="icon" asChild>
+                      <Link href={`/dashboard/products/${product.id}`}>
+                        <Eye className="h-4 w-4" />
+                      </Link>
                     </Button>
                     <Button variant="ghost" size="icon">
                       <Edit className="h-4 w-4" />

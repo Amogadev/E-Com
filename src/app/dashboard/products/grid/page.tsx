@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Card,
   CardContent,
@@ -35,7 +36,7 @@ export default function ProductGridPage() {
           <CardHeader className="p-0">
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src={product.imageUrl}
+                src={product.images[0].url}
                 alt={product.name}
                 fill
                 className="object-cover"
@@ -56,9 +57,11 @@ export default function ProductGridPage() {
           </CardContent>
           <CardFooter className="p-4 bg-secondary/50">
             <div className="w-full flex justify-end gap-2">
-              <Button variant="outline" size="sm">
-                <Eye className="mr-2 h-4 w-4" />
-                View
+              <Button variant="outline" size="sm" asChild>
+                <Link href={`/dashboard/products/${product.id}`}>
+                  <Eye className="mr-2 h-4 w-4" />
+                  View
+                </Link>
               </Button>
               <Button size="sm">
                 <Edit className="mr-2 h-4 w-4" />

@@ -44,7 +44,7 @@ const menuItems = [
     subMenu: [
       { href: '/dashboard/products', label: 'List' },
       { href: '/dashboard/products/grid', label: 'Grid' },
-      { href: '#', label: 'Details' },
+      { href: '/dashboard/products/1', label: 'Details' },
       { href: '#', label: 'Edit' },
       { href: '#', label: 'Create' },
     ]
@@ -84,7 +84,7 @@ export default function DashboardLayout({
                       <SidebarSubMenuItem key={subItem.label}>
                         <Link href={subItem.href}>
                           <SidebarSubMenuButton
-                            isActive={pathname === subItem.href}
+                            isActive={pathname === subItem.href || (subItem.label === 'Details' && pathname.startsWith('/dashboard/products/')) && !pathname.endsWith('grid') && !pathname.endsWith('products')}
                           >
                             {subItem.label}
                           </SidebarSubMenuButton>
