@@ -1,3 +1,4 @@
+
 'use client';
 import { useState, useEffect } from 'react';
 import { SidebarTrigger } from '@/components/ui/sidebar';
@@ -36,6 +37,9 @@ function getPageTitle(pathname: string) {
     }
     if (pathname.startsWith('/dashboard/overview')) {
         return 'Overview';
+    }
+    if (pathname.startsWith('/dashboard/customers')) {
+        return 'Customer List';
     }
     return 'Dashboard';
 }

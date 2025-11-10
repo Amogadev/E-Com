@@ -113,6 +113,36 @@
       "description": "Avatar for a product reviewer.",
       "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974",
       "imageHint": "user profile"
+    },
+    {
+      "id": "customer-1",
+      "description": "Avatar for Michael A. Miner.",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974",
+      "imageHint": "male professional"
+    },
+    {
+      "id": "customer-2",
+      "description": "Avatar for Theresa T. Brose.",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976",
+      "imageHint": "female professional"
+    },
+    {
+      "id": "customer-3",
+      "description": "Avatar for James L. Erickson.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974",
+      "imageHint": "male smiling"
+    },
+    {
+      "id": "customer-4",
+      "description": "Avatar for Lily W. Wilson.",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "customer-5",
+      "description": "Avatar for Sarah M. Brooks.",
+      "imageUrl": "https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=1972",
+      "imageHint": "woman smiling"
     }
   ]
 }
