@@ -121,7 +121,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             </div>
 
             <div className="flex gap-2">
-                <Button size="lg"><Edit className="mr-2 h-4 w-4" /> Edit Product</Button>
+                <Button size="lg" asChild><Link href={`/dashboard/products/${product.id}/edit`}><Edit className="mr-2 h-4 w-4" /> Edit Product</Link></Button>
                 <Button size="lg" variant="outline" className="text-destructive hover:text-destructive">
                     <Trash2 className="mr-2 h-4 w-4" /> Delete
                 </Button>

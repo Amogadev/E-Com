@@ -45,7 +45,7 @@ const menuItems = [
       { href: '/dashboard/products', label: 'List' },
       { href: '/dashboard/products/grid', label: 'Grid' },
       { href: '/dashboard/products/1', label: 'Details' },
-      { href: '#', label: 'Edit' },
+      { href: '/dashboard/products/1/edit', label: 'Edit' },
       { href: '#', label: 'Create' },
     ]
   },
@@ -64,6 +64,15 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  const isProductRoute = (path: string) => pathname.startsWith('/dashboard/products') && !pathname.includes('grid')
+  
+  const getActiveState = (subItemHref: string, subItemLabel: string) => {
+    if (pathname === subItemHref) return true;
+    if (subItemLabel === 'Details' && isProductRoute(pathname) && !pathname.endsWith('edit')) return true;
+    if (subItemLabel === 'Edit' && isProductRoute(pathname) && pathname.endsWith('edit')) return true;
+    return false;
+  }
+
   return (
     <SidebarProvider>
       <Sidebar>
@@ -78,13 +87,13 @@ export default function DashboardLayout({
                   <SidebarSubMenu
                     icon={item.icon}
                     label={item.label}
-                    active={item.subMenu.some(sub => pathname.startsWith(sub.href))}
+                    active={item.subMenu.some(sub => getActiveState(sub.href, sub.label) || pathname.startsWith(sub.href))}
                   >
                     {item.subMenu.map((subItem) => (
                       <SidebarSubMenuItem key={subItem.label}>
                         <Link href={subItem.href}>
                           <SidebarSubMenuButton
-                            isActive={pathname === subItem.href || (subItem.label === 'Details' && pathname.startsWith('/dashboard/products/')) && !pathname.endsWith('grid') && !pathname.endsWith('products')}
+                            isActive={getActiveState(subItem.href, subItem.label)}
                           >
                             {subItem.label}
                           </SidebarSubMenuButton>

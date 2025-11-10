@@ -63,9 +63,11 @@ export default function ProductGridPage() {
                   View
                 </Link>
               </Button>
-              <Button size="sm">
-                <Edit className="mr-2 h-4 w-4" />
-                Edit
+              <Button size="sm" asChild>
+                <Link href={`/dashboard/products/${product.id}/edit`}>
+                  <Edit className="mr-2 h-4 w-4" />
+                  Edit
+                </Link>
               </Button>
             </div>
           </CardFooter>
