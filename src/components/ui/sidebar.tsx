@@ -1,4 +1,5 @@
 
+
 "use client"
 
 import * as React from "react"
@@ -691,23 +692,6 @@ const SidebarMenuSkeleton = React.forwardRef<
 })
 SidebarMenuSkeleton.displayName = "SidebarMenuSkeleton"
 
-const SidebarOldMenuSub = React.forwardRef<
-  HTMLUListElement,
-  React.ComponentProps<"ul">
->(({ className, ...props }, ref) => (
-  <ul
-    ref={ref}
-    data-sidebar="menu-sub"
-    className={cn(
-      "mx-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-l border-sidebar-border px-2.5 py-0.5",
-      "group-data-[collapsible=icon]:hidden",
-      className
-    )}
-    {...props}
-  />
-))
-SidebarOldMenuSub.displayName = "SidebarMenuSub"
-
 const SidebarSubMenu = ({
   label,
   icon: Icon,
@@ -752,7 +736,7 @@ const SidebarMenuSub = React.forwardRef<
     ref={ref}
     data-sidebar="menu-sub"
     className={cn(
-      "flex min-w-0 flex-col gap-1 py-1 group-data-[collapsible=icon]:hidden",
+      "flex min-w-0 flex-col gap-1 py-1 pl-6 group-data-[collapsible=icon]:hidden",
       className
     )}
     {...props}
@@ -815,7 +799,7 @@ export {
   SidebarMenuItem,
   SidebarMenuSkeleton,
   SidebarSubMenu,
-  SidebarMenuSub as SidebarMenuSub,
+  SidebarMenuSub,
   SidebarSubMenuButton,
   SidebarSubMenuItem,
   SidebarProvider,
