@@ -1,3 +1,4 @@
+
 'use client';
 
 import { products } from '../data';
@@ -80,10 +81,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
         <Card>
-            <CardContent className="p-6 md:p-8">
-                <div className="grid md:grid-cols-2 gap-8">
+            <CardContent className="p-6">
+                <div className="grid md:grid-cols-2 gap-6">
                     {/* Left Column: Image Gallery */}
                     <div>
                         <div className="aspect-square relative w-full overflow-hidden rounded-lg bg-secondary mb-4">
@@ -131,9 +132,9 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
 
                         <Rating rating={product.rating} reviewCount={product.reviews} />
                         
-                        <Separator className="my-4" />
+                        <Separator className="my-3" />
                         
-                        <div className="flex items-baseline gap-2 mb-4">
+                        <div className="flex items-baseline gap-2 mb-3">
                             <span className="text-4xl font-bold text-primary">${discountedPrice.toFixed(2)}</span>
                             {product.discount > 0 && (
                                 <>
@@ -143,7 +144,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                             )}
                         </div>
                         
-                        <div className="flex gap-8 mb-6">
+                        <div className="flex gap-8 mb-4">
                             <div>
                                 <p className="font-semibold mb-2">Colors &gt; <span className="text-muted-foreground">{product.color}</span></p>
                                 <div className="flex gap-2">
@@ -164,7 +165,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                             </div>
                         </div>
 
-                        <div className="mb-6">
+                        <div className="mb-4">
                             <p className="font-semibold mb-2">Quantity :</p>
                             <div className="flex items-center gap-2">
                                 <Button variant="outline" size="icon" onClick={() => handleQuantityChange(-1)}><Minus className="h-4 w-4" /></Button>
@@ -173,7 +174,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                             </div>
                         </div>
                         
-                        <div className="space-y-2 text-sm text-green-600 mb-6">
+                        <div className="space-y-2 text-sm text-green-600 mb-4">
                             {product.stock > 0 ? (
                                 <p>✓ In Stock</p>
                             ) : (
@@ -192,7 +193,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             </CardContent>
         </Card>
         
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             {serviceFeatures.map((feature, index) => (
                 <Card key={index}>
                     <CardContent className="p-4 flex items-center gap-4">
@@ -208,13 +209,13 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             ))}
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
             <Card className="md:col-span-2">
                 <CardHeader>
                     <CardTitle>Items Detail</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <div className="grid grid-cols-2 gap-x-8 gap-y-4 text-sm">
+                    <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
                         <div className="flex justify-between border-b pb-2">
                             <span className="font-medium text-muted-foreground">Product Dimensions</span>
                             <span className="text-right">{product.dimensions}</span>
@@ -279,3 +280,5 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
     </div>
   );
 }
+
+  
