@@ -2,6 +2,7 @@
 import { products } from '../data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Card,
   CardContent,
@@ -18,7 +19,7 @@ import {
 } from '@/components/ui/carousel';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Star, Edit, Trash2 } from 'lucide-react';
+import { Star, Edit, Trash2, ArrowLeft } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { format } from 'date-fns';
 
@@ -77,9 +78,17 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
           </CardContent>
           
           <CardContent className="p-6 flex flex-col justify-center">
-            <CardHeader className="p-0 mb-4">
-                <CardTitle className="text-3xl font-bold">{product.name}</CardTitle>
-            </CardHeader>
+            <div className="flex justify-between items-start mb-4">
+              <CardHeader className="p-0">
+                  <CardTitle className="text-3xl font-bold">{product.name}</CardTitle>
+              </CardHeader>
+              <Button variant="outline" size="sm" asChild>
+                  <Link href="/dashboard/products">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
+                    Back to List
+                  </Link>
+              </Button>
+            </div>
 
             <Rating rating={product.rating} reviewCount={product.reviews} />
             
