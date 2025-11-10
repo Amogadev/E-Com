@@ -54,7 +54,7 @@ export function FooterCtaSection() {
                         </div>
                         <Card className="text-center h-full flex flex-col pt-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <CardHeader className="p-3">
-                                <div className="inline-block bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-xs mx-auto mb-2">{incentive.badge}</div>
+                                <div className="inline-block bg-accent/10 text-accent font-semibold py-1 px-3 rounded-full text-xs mx-auto mb-2">{incentive.badge}</div>
                                 <CardTitle className="text-lg font-bold">{incentive.title}</CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col justify-between p-4">
