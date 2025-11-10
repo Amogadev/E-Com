@@ -48,34 +48,31 @@ const formSchema = z.object({
   dimensions: z.string().min(1, 'Dimensions are required'),
   brand: z.string().min(1, 'Brand is required'),
   weight: z.string().min(1, 'Weight is required'),
-  gender: z.string().min(1, 'Gender is required'),
 });
 
 type FormValues = z.infer<typeof formSchema>;
 
 const categories = ['Living Room', 'Office', 'Dining', 'Bedroom', 'Fashion', 'Electronics'];
-const genders = ['Men', 'Women', 'Unisex'];
 
 export default function CreateProductPage() {
   const router = useRouter();
   const { toast } = useToast();
-  const tshirtImage = PlaceHolderImages.find(img => img.id === 'tshirt-preview');
+  const furnitureImage = PlaceHolderImages.find(img => img.id === 'product-1-1');
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: 'Men Black Slim Fit T-shirt',
-      description: '',
-      price: 100,
-      discount: 30,
-      stock: 100,
-      category: 'Fashion',
-      color: 'Black',
-      material: '',
-      dimensions: '',
-      brand: '',
-      weight: '',
-      gender: 'Men',
+      name: 'Elegant Velvet Sofa',
+      description: 'A luxurious and comfortable sofa, upholstered in premium velvet.',
+      price: 899.99,
+      discount: 10,
+      stock: 120,
+      category: 'Living Room',
+      color: 'Royal Blue',
+      material: 'Velvet, Hardwood',
+      dimensions: '88" W x 35" D x 32" H',
+      brand: 'chocobe',
+      weight: '75 lbs',
     },
   });
   
@@ -101,7 +98,7 @@ export default function CreateProductPage() {
               <CardContent className="p-0">
                   <div className="relative aspect-[4/3] w-full bg-secondary flex items-center justify-center">
                       <Image
-                          src={tshirtImage?.imageUrl || "https://picsum.photos/seed/tshirt-preview/800/600"}
+                          src={furnitureImage?.imageUrl || "https://picsum.photos/seed/furniture-preview/800/600"}
                           alt={watchedValues.name || "Product Preview"}
                           fill
                           className="object-cover"
@@ -285,32 +282,8 @@ export default function CreateProductPage() {
                                       <FormItem>
                                       <FormLabel>Weight</FormLabel>
                                       <FormControl>
-                                          <Input placeholder="in gm & kg" {...field} />
+                                          <Input placeholder="e.g. 75 lbs" {...field} />
                                       </FormControl>
-                                      <FormMessage />
-                                      </FormItem>
-                                  )}
-                              />
-                              <FormField
-                                  control={form.control}
-                                  name="gender"
-                                  render={({ field }) => (
-                                      <FormItem>
-                                      <FormLabel>Gender</FormLabel>
-                                       <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                            <FormControl>
-                                            <SelectTrigger>
-                                                <SelectValue placeholder="Select Gender" />
-                                            </SelectTrigger>
-                                            </FormControl>
-                                            <SelectContent>
-                                            {genders.map((gender) => (
-                                                <SelectItem key={gender} value={gender}>
-                                                {gender}
-                                                </SelectItem>
-                                            ))}
-                                            </SelectContent>
-                                        </Select>
                                       <FormMessage />
                                       </FormItem>
                                   )}
