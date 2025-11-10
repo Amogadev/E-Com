@@ -71,7 +71,6 @@ export function SuccessStoriesSection() {
                                 <p className="text-lg font-medium mb-6 italic text-foreground/80 flex-grow">"{story.quote}"</p>
                                 <div className="flex flex-col items-center gap-4">
                                     <Avatar className="h-20 w-20 border-2 border-primary/50 p-1">
-                                        <AvatarImage src={avatarImage?.imageUrl} alt={story.name} />
                                         <AvatarFallback>
                                             <User className="h-10 w-10 text-muted-foreground" />
                                         </AvatarFallback>
