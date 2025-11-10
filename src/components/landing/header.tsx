@@ -11,7 +11,7 @@ export function Header() {
           <Button variant="ghost" asChild>
             <Link href="/login">Login</Link>
           </Button>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base" asChild>
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base" asChild>
             <Link href="#">Start Selling</Link>
           </Button>
         </nav>
