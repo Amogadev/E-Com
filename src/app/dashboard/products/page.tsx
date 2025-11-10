@@ -144,7 +144,7 @@ export default function ProductListPage() {
       </CardFooter>
     </Card>
     <footer className="text-center text-sm text-muted-foreground mt-4">
-        © 2025 chocobe.❤️
+        2025 © Larkon. Crafted by ❤️ <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-500">Techzaa</span>
     </footer>
     </>
   );
