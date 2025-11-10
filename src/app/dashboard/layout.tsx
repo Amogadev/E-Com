@@ -25,9 +25,6 @@ import {
   SidebarMenuButton,
   SidebarFooter,
   SidebarInset,
-  SidebarSubMenu,
-  SidebarSubMenuButton,
-  SidebarSubMenuItem,
 } from '@/components/ui/sidebar';
 import { Logo } from '@/components/logo';
 import { DashboardHeader } from './header';
@@ -43,8 +40,8 @@ const menuItems = [
     icon: Package,
     href: '/dashboard/products',
   },
+  { href: '/dashboard/orders', label: 'Orders', icon: ShoppingBag },
   { href: '#', label: 'Customer', icon: Users },
-  { href: '#', label: 'Orders', icon: ShoppingBag },
   { href: '#', label: 'Shipment', icon: Compass },
   { href: '#', label: 'Store Setting', icon: Store },
   { href: '#', label: 'Platform Partner', icon: Share2 },
