@@ -177,6 +177,20 @@ export default function ProductGridPage() {
                     );
                 })}
             </div>
+
+            <div className="flex justify-end mt-8">
+                <div className="flex items-center gap-2">
+                    <Button variant="outline">Previous</Button>
+                    <Button>1</Button>
+                    <Button variant="outline">2</Button>
+                    <Button variant="outline">3</Button>
+                    <Button variant="outline">Next</Button>
+                </div>
+            </div>
+
+            <footer className="text-center text-sm text-muted-foreground mt-8">
+                © 2025 chocobe.❤️
+            </footer>
         </div>
     </div>
   );
