@@ -1,10 +1,12 @@
 
+
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
+  CardFooter,
 } from '@/components/ui/card';
 import {
   Table,
@@ -92,6 +94,7 @@ const products = [
 
 export default function ProductListPage() {
   return (
+    <>
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
@@ -191,6 +194,19 @@ export default function ProductListPage() {
           </TableBody>
         </Table>
       </CardContent>
+      <CardFooter className="flex justify-end">
+        <div className="flex items-center gap-2">
+            <Button variant="outline">Previous</Button>
+            <Button>1</Button>
+            <Button variant="outline">2</Button>
+            <Button variant="outline">3</Button>
+            <Button variant="outline">Next</Button>
+        </div>
+      </CardFooter>
     </Card>
+    <footer className="text-center text-sm text-muted-foreground mt-4">
+        © {new Date().getFullYear()} chocobe. Crafted with ❤️ by Firebase Studio
+    </footer>
+    </>
   );
 }
