@@ -44,9 +44,9 @@ const menuItems = [
   { href: '/dashboard/customers', label: 'Customer', icon: Users },
   { href: '/dashboard/shipment', label: 'Shipment', icon: Compass },
   { href: '/dashboard/settings', label: 'Store Setting', icon: Store },
-  { href: '#', label: 'Platform Partner', icon: Share2 },
-  { href: '#', label: 'Feedback', icon: MessageSquare },
-  { href: '#', label: 'Help & Support', icon: HelpCircle },
+  { href: '/dashboard/partner', label: 'Platform Partner', icon: Share2 },
+  { href: '/dashboard/feedback', label: 'Feedback', icon: MessageSquare },
+  { href: '/dashboard/help', label: 'Help & Support', icon: HelpCircle },
 ];
 
 export default function DashboardLayout({

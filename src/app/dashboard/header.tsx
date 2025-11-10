@@ -50,6 +50,15 @@ function getPageTitle(pathname: string) {
     if (pathname.startsWith('/dashboard/settings')) {
         return 'Store Setting';
     }
+    if (pathname.startsWith('/dashboard/partner')) {
+        return 'Platform Partner';
+    }
+    if (pathname.startsWith('/dashboard/feedback')) {
+        return 'Feedback';
+    }
+    if (pathname.startsWith('/dashboard/help')) {
+        return 'Help & Support';
+    }
     return 'Dashboard';
 }
 
