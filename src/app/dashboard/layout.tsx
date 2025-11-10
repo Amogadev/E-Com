@@ -46,7 +46,7 @@ const menuItems = [
       { href: '/dashboard/products/grid', label: 'Grid' },
       { href: '/dashboard/products/1', label: 'Details' },
       { href: '/dashboard/products/1/edit', label: 'Edit' },
-      { href: '#', label: 'Create' },
+      { href: '/dashboard/products/create', label: 'Create' },
     ]
   },
   { href: '#', label: 'Customer', icon: Users },
