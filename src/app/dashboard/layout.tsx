@@ -13,6 +13,7 @@ import {
   HelpCircle,
 } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import {
   SidebarProvider,
@@ -23,8 +24,10 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarFooter,
-  SidebarTrigger,
   SidebarInset,
+  SidebarSubMenu,
+  SidebarSubMenuButton,
+  SidebarSubMenuItem,
 } from '@/components/ui/sidebar';
 import { Logo } from '@/components/logo';
 import { DashboardHeader } from './header';
@@ -34,9 +37,18 @@ const menuItems = [
     href: '/dashboard/overview',
     label: 'Overview',
     icon: LayoutGrid,
-    active: true,
   },
-  { href: '#', label: 'Products', icon: Package },
+  { 
+    label: 'Products', 
+    icon: Package,
+    subMenu: [
+      { href: '#', label: 'List' },
+      { href: '#', label: 'Grid' },
+      { href: '#', label: 'Details' },
+      { href: '#', label: 'Edit' },
+      { href: '#', label: 'Create' },
+    ]
+  },
   { href: '#', label: 'Customer', icon: Users },
   { href: '#', label: 'Orders', icon: ShoppingBag },
   { href: '#', label: 'Shipment', icon: Compass },
@@ -51,6 +63,7 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
   return (
     <SidebarProvider>
       <Sidebar>
@@ -61,15 +74,35 @@ export default function DashboardLayout({
           <SidebarMenu>
             {menuItems.map((item) => (
               <SidebarMenuItem key={item.label}>
-                <Link href={item.href}>
-                  <SidebarMenuButton
-                    isActive={item.active}
+                {item.subMenu ? (
+                  <SidebarSubMenu
                     icon={item.icon}
-                    tooltip={item.label}
+                    label={item.label}
+                    active={item.subMenu.some(sub => pathname.startsWith(sub.href))}
                   >
-                    <span>{item.label}</span>
-                  </SidebarMenuButton>
-                </Link>
+                    {item.subMenu.map((subItem) => (
+                      <SidebarSubMenuItem key={subItem.label}>
+                        <Link href={subItem.href}>
+                          <SidebarSubMenuButton
+                            isActive={pathname === subItem.href}
+                          >
+                            {subItem.label}
+                          </SidebarSubMenuButton>
+                        </Link>
+                      </SidebarSubMenuItem>
+                    ))}
+                  </SidebarSubMenu>
+                ) : (
+                  <Link href={item.href!}>
+                    <SidebarMenuButton
+                      isActive={pathname === item.href}
+                      icon={item.icon}
+                      tooltip={item.label}
+                    >
+                      <span>{item.label}</span>
+                    </SidebarMenuButton>
+                  </Link>
+                )}
               </SidebarMenuItem>
             ))}
           </SidebarMenu>

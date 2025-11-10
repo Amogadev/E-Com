@@ -1,9 +1,12 @@
+
 "use client"
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"
-import { PanelLeft } from "lucide-react"
+import { ChevronDown, PanelLeft } from "lucide-react"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+
 
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
@@ -539,6 +542,7 @@ const SidebarMenuButton = React.forwardRef<
     asChild?: boolean
     isActive?: boolean
     tooltip?: string | React.ComponentProps<typeof TooltipContent>
+    icon?: React.ElementType
   } & VariantProps<typeof sidebarMenuButtonVariants>
 >(
   (
@@ -548,7 +552,9 @@ const SidebarMenuButton = React.forwardRef<
       variant = "default",
       size = "default",
       tooltip,
+      icon: Icon,
       className,
+      children,
       ...props
     },
     ref
@@ -564,7 +570,10 @@ const SidebarMenuButton = React.forwardRef<
         data-active={isActive}
         className={cn(sidebarMenuButtonVariants({ variant, size }), className)}
         {...props}
-      />
+      >
+        {Icon && <Icon />}
+        {children}
+      </Comp>
     )
 
     if (!tooltip) {
@@ -682,7 +691,7 @@ const SidebarMenuSkeleton = React.forwardRef<
 })
 SidebarMenuSkeleton.displayName = "SidebarMenuSkeleton"
 
-const SidebarMenuSub = React.forwardRef<
+const SidebarOldMenuSub = React.forwardRef<
   HTMLUListElement,
   React.ComponentProps<"ul">
 >(({ className, ...props }, ref) => (
@@ -697,23 +706,76 @@ const SidebarMenuSub = React.forwardRef<
     {...props}
   />
 ))
-SidebarMenuSub.displayName = "SidebarMenuSub"
+SidebarOldMenuSub.displayName = "SidebarMenuSub"
 
-const SidebarMenuSubItem = React.forwardRef<
+const SidebarSubMenu = ({
+  label,
+  icon: Icon,
+  children,
+  active,
+}: {
+  label: string;
+  icon: React.ElementType;
+  children: React.ReactNode;
+  active?: boolean;
+}) => {
+  const { state } = useSidebar();
+  const isCollapsed = state === 'collapsed';
+
+  return (
+    <Collapsible>
+      <CollapsibleTrigger asChild>
+        <SidebarMenuButton tooltip={label} icon={Icon} isActive={active}>
+          <span>{label}</span>
+          <ChevronDown
+            className={cn(
+              'ml-auto h-4 w-4 shrink-0 transition-transform duration-200',
+              isCollapsed && 'hidden'
+            )}
+          />
+        </SidebarMenuButton>
+      </CollapsibleTrigger>
+      <CollapsibleContent>
+        <SidebarMenuSub>{children}</SidebarMenuSub>
+      </CollapsibleContent>
+    </Collapsible>
+  );
+};
+SidebarSubMenu.displayName = "SidebarSubMenu"
+
+
+const SidebarMenuSub = React.forwardRef<
+  HTMLUListElement,
+  React.ComponentProps<"ul">
+>(({ className, ...props }, ref) => (
+  <ul
+    ref={ref}
+    data-sidebar="menu-sub"
+    className={cn(
+      "flex min-w-0 flex-col gap-1 py-1 group-data-[collapsible=icon]:hidden",
+      className
+    )}
+    {...props}
+  />
+));
+SidebarMenuSub.displayName = "SidebarMenuSub";
+
+
+const SidebarSubMenuItem = React.forwardRef<
   HTMLLIElement,
   React.ComponentProps<"li">
 >(({ ...props }, ref) => <li ref={ref} {...props} />)
-SidebarMenuSubItem.displayName = "SidebarMenuSubItem"
+SidebarSubMenuItem.displayName = "SidebarMenuSubItem"
 
-const SidebarMenuSubButton = React.forwardRef<
-  HTMLAnchorElement,
-  React.ComponentProps<"a"> & {
+const SidebarSubMenuButton = React.forwardRef<
+  HTMLButtonElement,
+  React.ComponentProps<"button"> & {
     asChild?: boolean
     size?: "sm" | "md"
     isActive?: boolean
   }
 >(({ asChild = false, size = "md", isActive, className, ...props }, ref) => {
-  const Comp = asChild ? Slot : "a"
+  const Comp = asChild ? Slot : "button"
 
   return (
     <Comp
@@ -722,7 +784,7 @@ const SidebarMenuSubButton = React.forwardRef<
       data-size={size}
       data-active={isActive}
       className={cn(
-        "flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sidebar-foreground outline-none ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-sidebar-accent-foreground",
+        "flex h-7 min-w-0 w-full items-center gap-2 overflow-hidden rounded-md px-2 text-sidebar-foreground outline-none ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-sidebar-accent-foreground",
         "data-[active=true]:bg-sidebar-accent data-[active=true]:text-sidebar-accent-foreground",
         size === "sm" && "text-xs",
         size === "md" && "text-sm",
@@ -733,7 +795,7 @@ const SidebarMenuSubButton = React.forwardRef<
     />
   )
 })
-SidebarMenuSubButton.displayName = "SidebarMenuSubButton"
+SidebarSubMenuButton.displayName = "SidebarSubMenuButton"
 
 export {
   Sidebar,
@@ -752,9 +814,10 @@ export {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenuSkeleton,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
+  SidebarSubMenu,
+  SidebarMenuSub as SidebarMenuSub,
+  SidebarSubMenuButton,
+  SidebarSubMenuItem,
   SidebarProvider,
   SidebarRail,
   SidebarSeparator,
